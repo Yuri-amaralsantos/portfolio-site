@@ -31,11 +31,5 @@
     "description": "Um aplicativo de chat em tempo real, com autenticação JWT, WebSockets (Socket.io) e PostgreSQL.",
     "image": "/projects/site3.png",
     "github": "https://github.com/Yuri-amaralsantos/javascriptChatApp"
-  },
-  {
-    "title": "Site sobre um jogo",
-    "description": "Um Site utilizando angular para frontend e json para armazenar dados.",
-    "image": "/projects/site6.png",
-    "github": "https://github.com/Yuri-amaralsantos/game-presentation"
   }
 ]
