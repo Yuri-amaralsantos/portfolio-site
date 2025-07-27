@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "../src/pages/home";
-import ProjectPage from "../src/pages/projects/projects";
-import AboutPage from "../src/pages/about";
+import Home from "../src/pages/homePage";
+import ProjectPage from "../src/pages/projectPage";
+import AboutPage from "../src/pages/aboutPage";
 
-import Nav from "../src/components/nav/Nav";
-import Footer from "../src/components/footer/Footer";
+import Nav from "../src/components/Nav";
+import Footer from "../src/components/Footer";
 
 // Mapping pages dynamically
 

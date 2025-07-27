@@ -1,11 +1,16 @@
-import ProjectCard from "../../components/projectCard/ProjectCard";
-import projects from "../../data/projects.json";
-import "./projects.css";
+import ProjectCard from "../components/ProjectCard";
+import projects from "../data/projects.json";
 
 const Project = () => {
   return (
-    <main>
-      <div id="todos-projetos">
+    <main className="p-4">
+      <div
+        className="grid gap-8
+                      grid-cols-1
+                      sm:grid-cols-2
+                      lg:grid-cols-3
+                      justify-center"
+      >
         {projects.map((project, index) => (
           <ProjectCard
             key={index}
