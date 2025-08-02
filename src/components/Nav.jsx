@@ -7,10 +7,7 @@ const Nav = () => {
 
   const toggleMenu = () => setMenuVisible((prev) => !prev);
 
-  const pageLinks = [
-    { path: "/About", label: "Sobre" },
-    { path: "/projects", label: "Projetos" },
-  ];
+  const pageLinks = [{ path: "/projects", label: "Projetos" }];
 
   const renderLinks = (isMobile = false) => (
     <>
@@ -45,7 +42,6 @@ const Nav = () => {
           Yuri Amaral Santos
         </Link>
 
-        {/* Desktop Menu */}
         <nav className="hidden md:flex items-center">
           {renderLinks()}
           <a
@@ -57,7 +53,6 @@ const Nav = () => {
           </a>
         </nav>
 
-        {/* Mobile Toggle */}
         <button
           onClick={toggleMenu}
           className="md:hidden focus:outline-none text-3xl"
@@ -67,7 +62,6 @@ const Nav = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {menuVisible && (
         <div className="md:hidden bg-gray-800 text-white px-4 pb-4 space-y-2 shadow-inner">
           <Link

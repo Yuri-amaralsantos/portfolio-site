@@ -1,8 +1,8 @@
-const AboutPage = () => {
+const AboutSection = () => {
   return (
-    <main className="min-h-screen bg-zinc-900 text-white">
+    <section className="bg-zinc-900 text-white py-12 px-4">
       {/* Sobre mim */}
-      <section className="flex flex-col items-center mb-12">
+      <div className="flex flex-col items-center mb-12">
         <h2 className="text-3xl font-bold text-center mb-6">Sobre mim</h2>
         <p className="text-justify leading-relaxed max-w-2xl">
           Olá, meu nome é <strong>Yuri Amaral Santos</strong>, sou natural do
@@ -22,11 +22,11 @@ const AboutPage = () => {
           nuvem, sempre buscando aprimorar minhas habilidades e entregar
           resultados de qualidade.
         </p>
-      </section>
+      </div>
 
       {/* Experiências */}
-      <section className="mb-20">
-        <h3 className="text-2xl font-semibold text-center mt-8 mb-4">
+      <div className="mb-12">
+        <h3 className="text-2xl font-semibold text-center mb-4">
           Experiências
         </h3>
         <ul className="list-disc list-inside max-w-2xl mx-auto text-left">
@@ -34,9 +34,9 @@ const AboutPage = () => {
             <strong>PlanoBTech</strong> (2024-atualmente): Desenvolvedor
           </li>
         </ul>
-      </section>
-    </main>
+      </div>
+    </section>
   );
 };
 
-export default AboutPage;
+export default AboutSection;
