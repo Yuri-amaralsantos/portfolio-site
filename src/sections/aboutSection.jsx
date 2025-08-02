@@ -31,7 +31,8 @@ const AboutSection = () => {
         </h3>
         <ul className="list-disc list-inside max-w-2xl mx-auto text-left">
           <li>
-            <strong>PlanoBTech</strong> (2024-atualmente): Desenvolvedor
+            <strong>Hooney Plus</strong> (junho de 2025-atualmente):
+            Desenvolvedor Fullstack
           </li>
         </ul>
       </div>
