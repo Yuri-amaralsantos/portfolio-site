@@ -42,29 +42,28 @@ const skillsData = {
   ],
 };
 
-const Skills = () => {
+const SkillSection = () => {
   return (
-    <main className="px-4 py-12 max-w-5xl mx-auto text-center">
-      <h2 className="text-4xl font-bold mb-12">Habilidades</h2>
+    <main className="px-12 md:px-48 py-12 mx-auto text-center">
+      <h2 className="text-4xl text-black font-bold mb-12">Habilidades</h2>
 
-      {/* Render section helper */}
       {Object.entries(skillsData).map(([section, skills]) => (
         <section key={section} className="mb-12">
-          <h3 className="text-2xl font-semibold mb-6 capitalize">
+          <h3 className="text-2xl text-black font-semibold mb-6 capitalize">
             {section === "principais"
               ? "Principais Tecnologias"
               : section.charAt(0).toUpperCase() + section.slice(1)}
           </h3>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-center items-center">
+          <div className="flex flex-wrap justify-center gap-8 max-w-[900px] mx-auto">
             {skills.map(({ icon: Icon, label, color }) => (
-              <div key={label} className="flex flex-col items-center">
+              <div key={label} className="w-[120px] flex flex-col items-center">
                 <Icon
                   className={`${color} text-5xl hover:scale-110 transition-transform duration-300`}
                   aria-label={label}
                   title={label}
                 />
-                <span className="mt-2 text-sm font-medium text-gray-300">
+                <span className="mt-2 text-sm font-medium text-black">
                   {label}
                 </span>
               </div>
@@ -76,4 +75,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default SkillSection;
