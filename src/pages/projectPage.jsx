@@ -3,7 +3,7 @@ import projects from "../data/projects.json";
 
 const Project = () => {
   return (
-    <main className="pt-4 px-24">
+    <main className="pt-4 px-1 md:px-24">
       <div
         className="grid gap-8
                       grid-cols-1

@@ -1,8 +1,8 @@
 const AboutSection = () => {
   return (
-    <section className="bg-[#0a0c0f] text-black py-12 px-4">
-      <div className="max-w-2xl bg-white w-full mx-auto mb-12 p-6 rounded border border-white ">
-        <h2 className="text-3xl font-bold text-center mb-6">Sobre mim</h2>
+    <section className="bg-[#0a0c0f] text-black py-12 px-2 md:px-4">
+      <div className="max-w-2xl bg-white w-full mx-auto mb-12 p-2 md:p-6 rounded border border-white ">
+        <h2 className="text-3xl font-bold text-center mb-6 px-2">Sobre mim</h2>
         <p className="text-justify leading-relaxed">
           Olá, meu nome é <strong>Yuri Amaral Santos</strong>, sou natural do
           Rio de Janeiro e me formei em Análise e Desenvolvimento de Sistemas
@@ -23,9 +23,9 @@ const AboutSection = () => {
         </p>
       </div>
 
-      <div className="max-w-2xl bg-white w-full rounded mx-auto mb-12 p-6 ">
+      <div className="max-w-2xl bg-white w-full rounded mx-auto mb-12 p-2 md:p-6 ">
         <h3 className="text-2xl font-semibold text-center mb-4">Formação</h3>
-        <ul className="list-disc list-inside text-left">
+        <ul className="list-disc list-inside text-left px-2">
           <li>
             <strong>Ciências contabeis</strong> (2017-2021): Curso concluído,
             registro no conselho em andamento
@@ -38,7 +38,7 @@ const AboutSection = () => {
         </ul>
       </div>
 
-      <div className="max-w-2xl w-full mx-auto rounded p-6 bg-white">
+      <div className="max-w-2xl w-full mx-auto rounded p-2 md:p-6 bg-white">
         <h3 className="text-2xl font-semibold text-center mb-4">
           Experiências
         </h3>
