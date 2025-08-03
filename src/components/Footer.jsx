@@ -56,7 +56,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="bg-gray-800 text-center py-4 text-gray-400 text-sm">
+      <div className="bg-gray-900 text-center py-4 text-gray-300 text-sm">
         &copy; 2025 Yuri Amaral Santos. Todos os direitos reservados.
       </div>
     </footer>

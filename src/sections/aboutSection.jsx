@@ -1,7 +1,7 @@
 const AboutSection = () => {
   return (
-    <section className="bg-[#0a0c0f] text-white py-12 px-4">
-      <div className="max-w-2xl w-full mx-auto mb-12 p-6 border border-white rounded-[1rem]">
+    <section className="bg-[#0a0c0f] text-black py-12 px-4">
+      <div className="max-w-2xl bg-white w-full mx-auto mb-12 p-6 rounded border border-white ">
         <h2 className="text-3xl font-bold text-center mb-6">Sobre mim</h2>
         <p className="text-justify leading-relaxed">
           Olá, meu nome é <strong>Yuri Amaral Santos</strong>, sou natural do
@@ -23,7 +23,7 @@ const AboutSection = () => {
         </p>
       </div>
 
-      <div className="max-w-2xl w-full mx-auto mb-12 p-6 border border-white rounded-[1rem]">
+      <div className="max-w-2xl bg-white w-full rounded mx-auto mb-12 p-6 ">
         <h3 className="text-2xl font-semibold text-center mb-4">Formação</h3>
         <ul className="list-disc list-inside text-left">
           <li>
@@ -38,7 +38,7 @@ const AboutSection = () => {
         </ul>
       </div>
 
-      <div className="max-w-2xl w-full mx-auto p-6 border border-white rounded-[1rem]">
+      <div className="max-w-2xl w-full mx-auto rounded p-6 bg-white">
         <h3 className="text-2xl font-semibold text-center mb-4">
           Experiências
         </h3>

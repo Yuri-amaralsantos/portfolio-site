@@ -55,7 +55,7 @@ const SkillSection = () => {
               : section.charAt(0).toUpperCase() + section.slice(1)}
           </h3>
 
-          <div className="flex flex-wrap justify-center gap-8 max-w-[900px] mx-auto">
+          <div className="flex flex-wrap justify-center gap-8 max-w-[900px] mx-auto  bg-white p-2 rounded">
             {skills.map(({ icon: Icon, label, color }) => (
               <div key={label} className="w-[120px] flex flex-col items-center">
                 <Icon
