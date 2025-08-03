@@ -5,11 +5,7 @@ const ProjectCard = ({ title, description, image, github, demo }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleClick = () => {
-    if (demo) {
-      setIsModalOpen(true);
-    } else if (github) {
-      window.open(github, "_blank");
-    }
+    setIsModalOpen(true);
   };
 
   const closeModal = () => {
@@ -20,7 +16,7 @@ const ProjectCard = ({ title, description, image, github, demo }) => {
     <>
       <div
         onClick={handleClick}
-        className="cursor-pointer bg-white rounded-lg shadow-lg
+        className="cursor-pointer bg-white rounded shadow-lg
                    p-4 w-full max-w-sm mx-auto
                    flex flex-col items-center text-center
                    transition-transform duration-300
@@ -45,16 +41,25 @@ const ProjectCard = ({ title, description, image, github, demo }) => {
           onClick={closeModal}
         >
           <div
-            className="bg-white rounded-lg p-6 w-80 text-center"
+            className="bg-[#34d399] rounded p-6 w-80 text-center relative"
             onClick={(e) => e.stopPropagation()}
           >
-            <h3 className="text-lg font-semibold mb-4">Links do Projeto</h3>
+            <button
+              onClick={closeModal}
+              className="absolute top-0 right-3 text-3xl text-black hover:text-white"
+              aria-label="Fechar modal"
+            >
+              &times;
+            </button>
+            <h3 className="text-lg font-semibold mb-4 text-black">
+              Links do Projeto
+            </h3>
             {github && (
               <a
                 href={github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block mb-3 px-4 py-2 border border-black rounded hover:bg-gray-100 transition"
+                className="block mb-3 px-4 py-2 bg-white rounded border border-white hover:bg-black hover:text-white"
               >
                 GitHub
               </a>
@@ -64,17 +69,11 @@ const ProjectCard = ({ title, description, image, github, demo }) => {
                 href={demo}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block mb-4 px-4 py-2 border border-black rounded hover:bg-gray-100 transition"
+                className="block mb-4 px-4 py-2 bg-white rounded border border-white hover:bg-black hover:text-white"
               >
                 Ver Demo
               </a>
             )}
-            <button
-              onClick={closeModal}
-              className="px-4 py-2 bg-black text-white rounded hover:bg-gray-800 transition"
-            >
-              Fechar
-            </button>
           </div>
         </div>
       )}
