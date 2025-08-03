@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <header className="relative w-full bg-black overflow-hidden border border-black">
+    <header className="relative w-full bg-[#0a0c0f] overflow-hidden border border-black">
       <div
         className="absolute top-0 right-0 w-1/2 h-full bg-cover bg-center opacity-50 pointer-events-none z-0"
         style={{
@@ -8,8 +8,7 @@ const Header = () => {
         }}
       />
 
-      {/* Conteúdo principal */}
-      <div className="relative z-10 text-white px-8 py-12 max-w-5xl">
+      <div className="relative z-10 text-white pl-36 py-12 max-w-5xl">
         <h1 className="text-5xl font-bold mb-2">Yuri Amaral Santos</h1>
         <p className="text-2xl font-light mb-6">Desenvolvedor e Designer</p>
         <h2 className="text-cyan-200 text-3xl font-medium leading-snug">

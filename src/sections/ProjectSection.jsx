@@ -20,16 +20,14 @@ const ProjectsSection = () => {
   );
 
   return (
-    <section className="p-4 mx-4 relative">
+    <section className="py-6 px-6 relative text-black">
       <h2 className="text-2xl font-bold mb-4 text-center">Projetos</h2>
 
-      {/* Carrossel com largura reduzida */}
       <div className="relative max-w-5xl mx-auto">
-        {/* Setas laterais afastadas dos cards */}
         {page > 0 && (
           <button
             onClick={handlePrev}
-            className="absolute -left-24 top-1/2 -translate-y-1/2 z-10 bg-gray-800 text-white p-3 rounded-full shadow hover:bg-gray-700"
+            className="absolute -left-24 top-1/2 -translate-y-1/2 z-10 bg-gray-400 text-black p-3 rounded-full shadow hover:bg-gray-700"
             aria-label="Anterior"
           >
             <FaChevronLeft size={20} />
@@ -38,14 +36,13 @@ const ProjectsSection = () => {
         {page < totalPages - 1 && (
           <button
             onClick={handleNext}
-            className="absolute -right-24 top-1/2 -translate-y-1/2 z-10 bg-gray-800 text-white p-3 rounded-full shadow hover:bg-gray-700"
+            className="absolute -right-24 top-1/2 -translate-y-1/2 z-10 bg-gray-400 text-black p-3 rounded-full shadow hover:bg-gray-700"
             aria-label="Próximo"
           >
             <FaChevronRight size={20} />
           </button>
         )}
 
-        {/* Cards centralizados */}
         <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center">
           {currentProjects.map((project, index) => (
             <ProjectCard
@@ -60,11 +57,10 @@ const ProjectsSection = () => {
         </div>
       </div>
 
-      {/* Botão Ver Mais */}
-      <div className="mt-6 text-center">
+      <div className="mt-6 text-center ">
         <Link
           to="/projects"
-          className="inline-block px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+          className="inline-block px-6 py-2 border hover:border-black bg-black text-white  hover:bg-white hover:text-black rounded transition"
         >
           Ver mais projetos
         </Link>
