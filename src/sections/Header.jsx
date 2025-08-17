@@ -10,7 +10,7 @@ const Header = () => {
 
       <div className="relative z-10 text-white text-center md:text-left pl-2 md:pl-36 py-12 max-w-5xl">
         <h1 className="text-5xl font-bold mb-2">Yuri Amaral Santos</h1>
-        <p className="text-2xl font-light mb-6">Desenvolvedor e Designer</p>
+        <p className="text-2xl font-light mb-6">Desenvolvedor Fullstack</p>
         <h2 className="text-cyan-200 text-3xl font-medium leading-snug">
           Transformando ideias em código, <br />e código em soluções.
         </h2>

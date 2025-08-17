@@ -8,18 +8,17 @@ const AboutSection = () => {
           Rio de Janeiro e me formei em Análise e Desenvolvimento de Sistemas
           pela Universidade Estácio de Sá (UNESA).
           <span className="block h-2" />
-          Sou desenvolvedor e designer, com grande paixão por criar soluções
-          inovadoras e funcionais. Minha principal ferramenta de design é o
-          Figma.
+          Sou desenvolvedo, com grande paixão por criar soluções inovadoras e
+          funcionais.
           <span className="block h-2" />
-          No desenvolvimento, sou especializado em JavaScript, Python e Java, e
-          utilizo os frameworks Vue.js e React para front-end. Tenho experiência
-          em desenvolvimento de aplicativos móveis com Dart e Flutter.
+          No desenvolvimento, sou especializado em JavaScript, Python e DotNet,
+          e utilizo os frameworks Vue.js e React para front-end. Tenho
+          experiência em desenvolvimento de aplicativos móveis com React Native.
           <span className="block h-2" />
-          Além disso, possuo experiência na criação de jogos com Unity, no
-          desenvolvimento de bancos de dados e no gerenciamento de serviços de
-          nuvem, sempre buscando aprimorar minhas habilidades e entregar
-          resultados de qualidade.
+          Além disso, possuo experiência na criação de jogos com Unity e Godot,
+          e no desenvolvimento de bancos de dados com MySQL e PostgreSQL, sempre
+          buscando aprimorar minhas habilidades e entregar resultados de
+          qualidade.
         </p>
       </div>
 

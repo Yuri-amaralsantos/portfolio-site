@@ -1,12 +1,5 @@
 [
   {
-    "title": "BlogVue",
-    "description": "Um blog de tecnologia moderno e responsivo. Foi desenvolvovido utilizando vue.js.",
-    "image": "/projects/fotoSite2.png",
-    "demo": "https://blog-vue-git-main-yuri-santoss-projects.vercel.app",
-    "github": "https://github.com/Yuri-amaralsantos/blogVue"
-  },
-  {
     "title": "Site de avaliação de livros",
     "description": "Um site de avaliação de livros com Asp.net/C# (backend), React (frontend) e PostgreSQL.",
     "image": "/projects/site5.png",
