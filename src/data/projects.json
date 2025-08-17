@@ -1,11 +1,5 @@
 [
   {
-    "title": "Site de avaliação de livros",
-    "description": "Um site de avaliação de livros com Asp.net/C# (backend), React (frontend) e PostgreSQL.",
-    "image": "/projects/site5.png",
-    "github": "https://github.com/Yuri-amaralsantos/bookRatingNetCore"
-  },
-  {
     "title": "Portal Abrams",
     "description": "Um portal educacional da ong Instituto Abrams com cursos, questões e jogos. Foi desenvolvovido utilizando react e supabase.",
     "image": "/projects/site7.png",
