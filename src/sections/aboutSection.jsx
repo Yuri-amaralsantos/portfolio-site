@@ -8,7 +8,7 @@ const AboutSection = () => {
           Rio de Janeiro e me formei em Análise e Desenvolvimento de Sistemas
           pela Universidade Estácio de Sá (UNESA).
           <span className="block h-2" />
-          Sou desenvolvedo, com grande paixão por criar soluções inovadoras e
+          Sou desenvolvedor com grande paixão por criar soluções inovadoras e
           funcionais.
           <span className="block h-2" />
           No desenvolvimento, sou especializado em JavaScript, Python e DotNet,
