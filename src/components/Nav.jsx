@@ -20,7 +20,7 @@ const Nav = () => {
         <Link
           key={path}
           to={path}
-          className={`block px-4 py-2 hover:text-blue-500 ${
+          className={`block px-4 py-2 font-bold hover:underline ${
             !isMobile ? "inline-block mr-6" : "mb-2"
           }`}
           onClick={() => isMobile && setMenuVisible(false)}
@@ -34,8 +34,8 @@ const Nav = () => {
   return (
     <header className="bg-[#0a0c0f] text-white shadow-md fixed w-full z-50">
       <div className="w-full max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
-        <Link to="/" className="text-2xl font-bold">
-          Yuri Amaral Santos
+        <Link to="/" className="text-2xl font-bold hover:underline">
+          Yuri A. Santos
         </Link>
 
         <nav className="hidden md:flex items-center">
@@ -43,7 +43,7 @@ const Nav = () => {
             {renderLinks()}
             <a
               href="#footer"
-              className="inline-block px-4 py-2 hover:text-blue-500 mr-6"
+              className="inline-block px-4 py-2 font-bold hover:underline mr-6"
             >
               Contato
             </a>

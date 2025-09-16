@@ -28,7 +28,7 @@ const ProjectsSection = () => {
     : maxProjects.slice(page * projectsPerPage, (page + 1) * projectsPerPage);
 
   return (
-    <section className="py-6 px-1 md:px-6 relative text-black">
+    <section className="py-6 px-3 md:px-6 relative text-white">
       <h2 className="text-2xl font-bold mb-4 text-center">Projetos</h2>
 
       <div className="relative max-w-5xl mx-auto">
@@ -68,7 +68,7 @@ const ProjectsSection = () => {
       <div className="mt-6 text-center">
         <Link
           to="/projects"
-          className="inline-block px-6 py-2 font-bold rounded border border-black bg-black text-white hover:bg-white hover:text-black transition"
+          className="inline-block px-6 py-2 font-bold rounded border hover:border-white hover:bg-black hover:text-white bg-white text-black transition"
         >
           Ver mais projetos
         </Link>

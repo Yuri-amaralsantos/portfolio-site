@@ -41,17 +41,17 @@ const ProjectCard = ({ title, description, image, github, demo }) => {
           onClick={closeModal}
         >
           <div
-            className="bg-[#34d399] rounded p-6 w-80 text-center relative"
+            className="bg-black rounded p-6 w-80 text-center relative"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={closeModal}
-              className="absolute top-0 right-3 text-3xl text-black hover:text-white"
+              className="absolute top-0 right-3 text-3xl hover:text-gray-400"
               aria-label="Fechar modal"
             >
               &times;
             </button>
-            <h3 className="text-lg font-semibold mb-4 text-black">
+            <h3 className="text-lg font-semibold mb-4 text-white">
               Links do Projeto
             </h3>
             {github && (
@@ -59,7 +59,7 @@ const ProjectCard = ({ title, description, image, github, demo }) => {
                 href={github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block mb-3 px-4 py-2 bg-white rounded border border-white hover:bg-black hover:text-white"
+                className="block mb-3 px-4 py-2 bg-white rounded border border-white text-black hover:bg-black hover:text-white"
               >
                 GitHub
               </a>
@@ -69,7 +69,7 @@ const ProjectCard = ({ title, description, image, github, demo }) => {
                 href={demo}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block mb-4 px-4 py-2 bg-white rounded border border-white hover:bg-black hover:text-white"
+                className="block mb-4 px-4 py-2 bg-white rounded border border-white text-black hover:bg-black hover:text-white"
               >
                 Ver Demo
               </a>
