@@ -1,5 +1,12 @@
 [
   {
+    "title": "Aplicativo de tarefas",
+    "description": "O Task Manager foi desenvolvido com foco em produtividade e organização, oferecendo uma experiência intuitiva tanto para equipes quanto para usuários individuais.",
+    "image": "/projects/projeto1.jpeg",
+    "demo": "https://task-manager-frontend-eight-teal.vercel.app/",
+    "github": "https://github.com/Yuri-amaralsantos/TaskManager-frontend"
+  },
+  {
     "title": "Portal Abrams",
     "description": "Um portal educacional da ong Instituto Abrams com cursos, questões e jogos. Foi desenvolvovido utilizando react e supabase.",
     "image": "/projects/site7.png",
