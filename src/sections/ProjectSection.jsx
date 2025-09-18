@@ -29,7 +29,7 @@ const ProjectsSection = () => {
 
   return (
     <section className="py-6 px-3 md:px-6 relative text-white">
-      <h2 className="text-2xl font-bold mb-4 text-center">Projetos</h2>
+      <h2 className="text-2xl font-semibold mb-6 text-center">Projetos</h2>
 
       <div className="relative max-w-5xl mx-auto">
         {!isMobile && page > 0 && (
@@ -51,7 +51,7 @@ const ProjectsSection = () => {
           </button>
         )}
 
-        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center">
+        <div className="grid px-12 gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center">
           {displayedProjects.map((project, index) => (
             <ProjectCard
               key={index}

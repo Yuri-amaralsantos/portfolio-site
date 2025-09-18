@@ -16,23 +16,20 @@ const ProjectCard = ({ title, description, image, github, demo }) => {
     <>
       <div
         onClick={handleClick}
-        className="cursor-pointer bg-white rounded shadow-lg
-                   p-4 w-full max-w-sm mx-auto
-                   flex flex-col items-center text-center
-                   transition-transform duration-300
-                   hover:scale-105"
+        className="cursor-pointer border border-gray-500 rounded-lg w-full max-w-sm mx-auto flex flex-col items-center 
+        text-center transition-transform duration-300 hover:scale-105"
       >
         {image && (
           <img
             src={image}
             alt={`${title} image`}
-            className="w-full h-40 object-cover rounded border border-black mb-4"
+            className="w-full h-40 object-cover rounded-t-lg mb-4"
           />
         )}
-        <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
-        <p className="text-gray-700 text-justify min-h-[100px]">
-          {description}
-        </p>
+        <div className="p-2">
+          <hr className="mb-4 border-gray-500" />
+          <h3 className="text-lg text-white mb-2">{title}</h3>
+        </div>
       </div>
 
       {isModalOpen && (
@@ -51,29 +48,35 @@ const ProjectCard = ({ title, description, image, github, demo }) => {
             >
               &times;
             </button>
-            <h3 className="text-lg font-semibold mb-4 text-white">
-              Links do Projeto
-            </h3>
-            {github && (
-              <a
-                href={github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block mb-3 px-4 py-2 bg-white rounded border border-white text-black hover:bg-black hover:text-white"
-              >
-                GitHub
-              </a>
-            )}
-            {demo && (
-              <a
-                href={demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block mb-4 px-4 py-2 bg-white rounded border border-white text-black hover:bg-black hover:text-white"
-              >
-                Ver Demo
-              </a>
-            )}
+            <div className="flex flex-col gap-4">
+              <h3 className="text-lg font-semibold text-white">Descrição</h3>
+              <p className="text-white text-justify min-h-[100px]">
+                {description}
+              </p>
+              <h3 className="text-lg font-semibold text-white">
+                Links do Projeto
+              </h3>
+              {github && (
+                <a
+                  href={github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-2 bg-white rounded border border-white text-black hover:bg-black hover:text-white"
+                >
+                  GitHub
+                </a>
+              )}
+              {demo && (
+                <a
+                  href={demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-2 bg-white rounded border border-white text-black hover:bg-black hover:text-white"
+                >
+                  Ver Demo
+                </a>
+              )}
+            </div>
           </div>
         </div>
       )}
