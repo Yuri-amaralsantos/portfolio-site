@@ -1,52 +1,167 @@
+import {
+  FaNodeJs,
+  FaReact,
+  FaVuejs,
+  FaAngular,
+  FaPython,
+  FaDocker,
+} from "react-icons/fa";
+import {
+  SiTailwindcss,
+  SiSpring,
+  SiFlask,
+  SiTypescript,
+  SiNextdotjs,
+  SiPhp,
+} from "react-icons/si";
+import { TbBrandCSharp } from "react-icons/tb";
+import { DiMongodb, DiMysql, DiPostgresql, DiDjango } from "react-icons/di";
+import { AiOutlineDotNet } from "react-icons/ai";
+
+const skillsData = {
+  frontend: [FaReact, FaVuejs, SiTailwindcss, SiNextdotjs, FaAngular],
+  backend: [FaNodeJs, SiSpring, SiFlask, AiOutlineDotNet, DiDjango],
+  linguagens: [SiTypescript, FaPython, SiPhp, TbBrandCSharp],
+  database: [DiMongodb, DiMysql, DiPostgresql],
+  outros: [FaDocker],
+};
+
+const getLabelFromIcon = (Icon) => {
+  const raw = Icon.displayName || Icon.name || "";
+  return raw.replace(/^[A-Z]{2,3}/, "");
+};
+
 const AboutSection = () => {
+  // Ordem e layout desejado: primeira linha -> backend | frontend
+  // segunda linha -> linguagens | database
+  const orderedSections = ["backend", "frontend", "linguagens", "database"];
+
+  const renderSection = (key) => {
+    const skills = skillsData[key] || [];
+    const title =
+      key === "linguagens"
+        ? "Linguagens"
+        : key.charAt(0).toUpperCase() + key.slice(1);
+
+    return (
+      <div
+        key={key}
+        className="p-3 rounded-md bg-transparent flex flex-col items-start"
+      >
+        <h4 className="text-sm font-semibold text-white mb-2 capitalize">
+          {title}
+        </h4>
+
+        {/* ícones dentro da célula (ajuste as colunas internas conforme quiser) */}
+        <div className="flex flex-wrap gap-3">
+          {skills.map((Icon, i) => (
+            <div
+              key={`${key}-${i}`}
+              className="w-12 flex flex-col items-center text-center"
+            >
+              <Icon className="text-white text-2xl hover:scale-110 transition-transform duration-200" />
+              <span className="text-[10px] mt-1 text-gray-300">
+                {getLabelFromIcon(Icon)}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
   return (
-    <section className=" text-black py-12 px-4">
-      <div className="max-w-4xl bg-white w-full mx-auto mb-12 p-3 md:p-6 rounded border border-white ">
-        <h2 className="text-3xl font-bold text-center mb-6 px-2">Sobre mim</h2>
-        <p className="text-justify leading-relaxed">
-          Olá, meu nome é <strong>Yuri Amaral Santos</strong>, sou natural do
-          Rio de Janeiro e me formei em Análise e Desenvolvimento de Sistemas
-          pela Universidade Estácio de Sá (UNESA).
-          <span className="block h-2" />
-          Sou desenvolvedor com grande paixão por criar soluções inovadoras e
-          funcionais.
-          <span className="block h-2" />
-          No desenvolvimento, sou especializado em JavaScript, Python e DotNet,
-          e utilizo os frameworks Vue.js e React para front-end. Tenho
-          experiência em desenvolvimento de aplicativos móveis com React Native.
-          <span className="block h-2" />
-          Além disso, possuo experiência na criação de jogos com Unity e Godot,
-          e no desenvolvimento de bancos de dados com MySQL e PostgreSQL, sempre
-          buscando aprimorar minhas habilidades e entregar resultados de
-          qualidade.
-        </p>
-      </div>
+    <section className="flex justify-center text-black py-24 px-4">
+      <div className="flex flex-col gap-4 w-full max-w-[1000px]">
+        <div className="w-full grid grid-cols-[1fr_2fr] gap-6">
+          <div className="text-left flex flex-col gap-4">
+            <div className="w-[160px] h-[160px] rounded-full overflow-hidden mx-auto mb-4">
+              <img
+                src="/photo.jpg"
+                alt="Foto de perfil"
+                className="w-full h-full object-cover"
+              />
+            </div>
 
-      <div className="max-w-4xl bg-white w-full rounded mx-auto mb-12 p-3 md:p-6 ">
-        <h3 className="text-2xl font-semibold text-center mb-4">Formação</h3>
-        <ul className="list-disc list-inside text-left px-2">
-          <li>
-            <strong>Ciências contabeis</strong> (2017-2021): Curso concluído,
-            registro no conselho em andamento
-          </li>
+            <div>
+              <h2 className="text-2xl text-white font-bold mb-2 pl-2">
+                Habilidades
+              </h2>
 
-          <li>
-            <strong>Análise e desenvolvimento de sistemas</strong>
-            (2022-2024): Curso concluído
-          </li>
-        </ul>
-      </div>
+              {/* Grid com 2 colunas e 2 linhas (a ordem no array define posição) */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {orderedSections.map(renderSection)}
+              </div>
 
-      <div className="max-w-4xl w-full mx-auto rounded p-3 md:p-6 bg-white">
-        <h3 className="text-2xl font-semibold text-center mb-4">
-          Experiências
-        </h3>
-        <ul className="list-disc list-inside text-left">
-          <li>
-            <strong>Hooney Plus</strong> (junho de 2025-atualmente):
-            Desenvolvedor Fullstack
-          </li>
-        </ul>
+              {/* Se houver itens "outros", mostramos abaixo ocupando toda a largura */}
+              {skillsData.outros && skillsData.outros.length > 0 && (
+                <div className="mt-4 p-2">
+                  <h4 className="text-sm font-semibold text-white mb-2">
+                    Outros
+                  </h4>
+                  <div className="flex gap-3">
+                    {skillsData.outros.map((Icon, i) => (
+                      <div
+                        key={`outros-${i}`}
+                        className="w-12 flex flex-col items-center"
+                      >
+                        <Icon className="text-white text-2xl" />
+                        <span className="text-[10px] mt-1 text-gray-300">
+                          {getLabelFromIcon(Icon)}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+          <div className="flex flex-col gap-4 w-full h-full mx-auto text-white mb-12 p-3 md:p-6 rounded ">
+            <div>
+              <h2 className="text-4xl font-bold text-left mb-6 px-2">
+                Sobre mim
+              </h2>
+              <p className="text-justify leading-relaxed">
+                Olá, meu nome é <strong>Yuri Amaral Santos</strong>, tenho 25
+                anos e sou natural do Rio de Janeiro. Sou desenvolvedor{" "}
+                <strong>Full Stack</strong> com foco em{" "}
+                <strong>.NET (C# / ASP.NET Core)</strong> e{" "}
+                <strong>TypeScript (React.js, Next.js, Node.js/Nest.js)</strong>
+                . Possuo experiência no desenvolvimento de{" "}
+                <strong>APIs REST</strong>, aplicações corporativas e soluções
+                web/mobile responsivas, incluindo autenticação de usuários,
+                integrações com bancos de dados relacionais e comunicação em
+                tempo real via <strong>WebSockets (Socket.io)</strong>.
+              </p>
+            </div>
+
+            <div className="text-white text-left ">
+              <h3 className="text-2xl pl-2 font-bold text-left mb-2">
+                Formação
+              </h3>
+              <div className="flex flex-col gap-2 text-left">
+                <p>
+                  <strong>Ciências contabeis</strong> (2017-2021): Curso
+                  concluído, registro no conselho em andamento
+                </p>
+
+                <p>
+                  <strong>Análise e desenvolvimento de sistemas</strong>
+                  (2022-2024): Curso concluído
+                </p>
+              </div>
+            </div>
+            <div className="text-white">
+              <h3 className="text-2xl font-semibold pl-2 mb-2">Experiências</h3>
+              <div className="flex flex-col ">
+                <p>
+                  <strong>Hooney Plus</strong> (junho de 2025-atualmente):
+                  Desenvolvedor Fullstack
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

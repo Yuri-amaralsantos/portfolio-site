@@ -1,7 +1,6 @@
-import AboutSection from "../sections/aboutSection";
+import AboutSection from "../sections/AboutSection";
 import Header from "../sections/Header";
 import ProjectsSection from "../sections/ProjectSection";
-import SkillSection from "../sections/SkillSection";
 
 const Home = () => {
   return (
@@ -10,7 +9,6 @@ const Home = () => {
         <Header />
         <ProjectsSection />
         <AboutSection />
-        <SkillSection />
       </div>
     </div>
   );
