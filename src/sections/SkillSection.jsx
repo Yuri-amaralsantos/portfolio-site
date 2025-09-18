@@ -47,30 +47,35 @@ const SkillSection = () => {
     <main className="px-8 md:px-48 py-12 mx-auto text-center">
       <h2 className="text-4xl text-white font-bold mb-12">Habilidades</h2>
 
-      {Object.entries(skillsData).map(([section, skills]) => (
-        <section key={section} className="mb-8">
-          <h3 className="text-lg text-white font-semibold mb-6 capitalize">
-            {section === "principais"
-              ? "Principais Tecnologias"
-              : section.charAt(0).toUpperCase() + section.slice(1)}
-          </h3>
+      <div className="bg-white">
+        {Object.entries(skillsData).map(([section, skills]) => (
+          <section key={section} className="mb-8 bg-white">
+            <h3 className="text-lg text-black font-semibold mb-6 capitalize">
+              {section === "principais"
+                ? "Principais Tecnologias"
+                : section.charAt(0).toUpperCase() + section.slice(1)}
+            </h3>
 
-          <div className="flex flex-wrap justify-center gap-8 max-w-[900px] mx-auto  bg-white p-2 rounded">
-            {skills.map(({ icon: Icon, label, color }) => (
-              <div key={label} className="w-[120px] flex flex-col items-center">
-                <Icon
-                  className={`${color} text-2xl hover:scale-110 transition-transform duration-300`}
-                  aria-label={label}
-                  title={label}
-                />
-                <span className="mt-2 text-sm font-medium text-black">
-                  {label}
-                </span>
-              </div>
-            ))}
-          </div>
-        </section>
-      ))}
+            <div className="flex flex-wrap justify-center gap-8 max-w-[900px] mx-auto  bg-white p-2 rounded">
+              {skills.map(({ icon: Icon, label, color }) => (
+                <div
+                  key={label}
+                  className="w-[120px] flex flex-col items-center"
+                >
+                  <Icon
+                    className={`${color} text-2xl hover:scale-110 transition-transform duration-300`}
+                    aria-label={label}
+                    title={label}
+                  />
+                  <span className="mt-2 text-sm font-medium text-black">
+                    {label}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
     </main>
   );
 };

@@ -32,7 +32,7 @@ const Nav = () => {
   );
 
   return (
-    <header className="bg-[#0a0c0f] text-white shadow-md fixed w-full z-50">
+    <header className="bg-[#222236] text-white shadow-md fixed w-full z-50">
       <div className="w-full max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
         <Link to="/" className="text-2xl font-bold hover:underline">
           Yuri A. Santos
