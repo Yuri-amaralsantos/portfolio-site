@@ -20,7 +20,7 @@ const Nav = () => {
         <Link
           key={path}
           to={path}
-          className={`block px-4 py-2 font-bold hover:underline ${
+          className={`block px-4 py-2 font-semibold hover:underline ${
             !isMobile ? "inline-block mr-6" : "mb-2"
           }`}
           onClick={() => isMobile && setMenuVisible(false)}
@@ -43,7 +43,7 @@ const Nav = () => {
             {renderLinks()}
             <a
               href="#footer"
-              className="inline-block px-4 py-2 font-bold hover:underline mr-6"
+              className="inline-block px-4 py-2 font-semibold hover:underline mr-6"
             >
               Contato
             </a>
