@@ -38,7 +38,7 @@ const ProjectCard = ({ title, description, image, github, demo }) => {
           onClick={closeModal}
         >
           <div
-            className="bg-black rounded p-6 w-80 text-center relative"
+            className="bg-[#222236] border border-gray-500 rounded p-6 w-80 text-center relative"
             onClick={(e) => e.stopPropagation()}
           >
             <button

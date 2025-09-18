@@ -26,11 +26,6 @@ const skillsData = {
   outros: [FaDocker],
 };
 
-const getLabelFromIcon = (Icon) => {
-  const raw = Icon.displayName || Icon.name || "";
-  return raw.replace(/^[A-Z]{2,3}/, "");
-};
-
 const AboutSection = () => {
   const orderedSections = ["backend", "frontend", "linguagens", "database"];
 
@@ -46,11 +41,10 @@ const AboutSection = () => {
         key={key}
         className="p-3 rounded-md bg-transparent flex flex-col items-start"
       >
-        <h4 className="text-sm font-semibold text-white mb-2 capitalize">
+        <h4 className="text-sm font-semibold text-white  mb-4 capitalize">
           {title}
         </h4>
 
-        {/* ícones dentro da célula (ajuste as colunas internas conforme quiser) */}
         <div className="flex flex-wrap gap-3">
           {skills.map((Icon, i) => (
             <div
@@ -58,9 +52,6 @@ const AboutSection = () => {
               className="w-12 flex flex-col items-center text-center"
             >
               <Icon className="text-white text-2xl hover:scale-110 transition-transform duration-200" />
-              <span className="text-[10px] mt-1 text-gray-300">
-                {getLabelFromIcon(Icon)}
-              </span>
             </div>
           ))}
         </div>
@@ -69,7 +60,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="flex justify-center text-black py-24 px-4">
+    <section className="flex justify-center text-black my-4 py-24 px-4">
       <div className="flex flex-col gap-4 w-full max-w-[1000px]">
         <div className="w-full grid grid-cols-[1fr_2fr] gap-6">
           <div className="text-left flex flex-col gap-4">
@@ -109,7 +100,7 @@ const AboutSection = () => {
               )}
             </div>
           </div>
-          <div className="flex flex-col gap-4 w-full h-full mx-auto text-white mb-12 p-3 md:p-6 rounded ">
+          <div className="flex flex-col gap-4 w-full h-full mx-auto text-white px-3 md:px-6 rounded ">
             <div>
               <h2 className="text-4xl font-bold text-left mb-6 px-2">
                 Sobre mim
