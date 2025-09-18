@@ -32,8 +32,6 @@ const getLabelFromIcon = (Icon) => {
 };
 
 const AboutSection = () => {
-  // Ordem e layout desejado: primeira linha -> backend | frontend
-  // segunda linha -> linguagens | database
   const orderedSections = ["backend", "frontend", "linguagens", "database"];
 
   const renderSection = (key) => {
@@ -88,12 +86,10 @@ const AboutSection = () => {
                 Habilidades
               </h2>
 
-              {/* Grid com 2 colunas e 2 linhas (a ordem no array define posição) */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {orderedSections.map(renderSection)}
               </div>
 
-              {/* Se houver itens "outros", mostramos abaixo ocupando toda a largura */}
               {skillsData.outros && skillsData.outros.length > 0 && (
                 <div className="mt-4 p-2">
                   <h4 className="text-sm font-semibold text-white mb-2">
@@ -106,9 +102,6 @@ const AboutSection = () => {
                         className="w-12 flex flex-col items-center"
                       >
                         <Icon className="text-white text-2xl" />
-                        <span className="text-[10px] mt-1 text-gray-300">
-                          {getLabelFromIcon(Icon)}
-                        </span>
                       </div>
                     ))}
                   </div>
