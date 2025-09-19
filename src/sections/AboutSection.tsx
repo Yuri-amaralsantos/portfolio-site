@@ -85,7 +85,7 @@ const AboutSection: React.FC = () => {
               <h2 className="text-4xl font-bold text-left mb-6 px-2">
                 Sobre mim
               </h2>
-              <p className="text-justify leading-tight mb-2">
+              <p className="text-justify leading-snug mb-2">
                 Olá, meu nome é <strong>Yuri Amaral Santos</strong>, tenho 25
                 anos e sou natural do Rio de Janeiro. Sou desenvolvedor{" "}
                 <strong>Full Stack</strong> com foco em{" "}
@@ -93,7 +93,7 @@ const AboutSection: React.FC = () => {
                 <strong>TypeScript (React.js, Next.js, Node.js/Nest.js)</strong>
                 .
               </p>
-              <p className="text-justify leading-tight">
+              <p className="text-justify leading-snug">
                 Possuo experiência no desenvolvimento de{" "}
                 <strong>APIs REST</strong>, aplicações corporativas e soluções
                 web/mobile responsivas, incluindo autenticação de usuários,
@@ -106,7 +106,7 @@ const AboutSection: React.FC = () => {
               <h3 className="text-2xl pl-2 font-bold text-left mb-2">
                 Formação
               </h3>
-              <div className="flex flex-col gap-2 text-left leading-tight">
+              <div className="flex flex-col gap-2 text-left leading-snug">
                 <p>
                   <strong>Ciências contabeis</strong> (2017-2021): Curso
                   concluído, registro no conselho em andamento
