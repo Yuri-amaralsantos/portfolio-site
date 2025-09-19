@@ -1,6 +1,6 @@
 import AboutSection from "../sections/AboutSection";
 import Header from "../sections/Header";
-import ProjectsSection from "../sections/ProjectSection";
+import ProjectsSection from "../sections/ProjectsSection";
 
 const Home = () => {
   return (
