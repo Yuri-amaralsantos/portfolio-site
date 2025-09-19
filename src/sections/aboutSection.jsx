@@ -29,6 +29,8 @@ const skillsData = {
 const AboutSection = () => {
   const orderedSections = ["backend", "frontend", "linguagens", "database"];
 
+  console.log("ok");
+
   const renderSection = (key) => {
     const skills = skillsData[key] || [];
     const title =
