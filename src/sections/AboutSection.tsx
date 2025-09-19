@@ -77,9 +77,58 @@ const AboutSection: React.FC = () => {
   };
 
   return (
-    <section className="flex justify-center text-black my-4 py-24 px-4">
-      <div className="flex flex-col gap-4 w-full max-w-[1000px]">
-        <div className="w-full grid grid-cols-[1fr_2fr] gap-6">
+    <section className="flex justify-center  text-black my-4 py-24 px-4">
+      <div className="flex flex-col gap-4 w-full border border-gray-500 rounded-xl max-w-[1000px]">
+        <div className="w-full grid grid-cols-[2fr_1fr] p-8 gap-6">
+          <div className="flex flex-col gap-4 w-full h-full mx-auto text-white px-3 md:px-6 rounded">
+            <div>
+              <h2 className="text-4xl font-bold text-left mb-6 px-2">
+                Sobre mim
+              </h2>
+              <p className="text-justify leading-tight mb-2">
+                Olá, meu nome é <strong>Yuri Amaral Santos</strong>, tenho 25
+                anos e sou natural do Rio de Janeiro. Sou desenvolvedor{" "}
+                <strong>Full Stack</strong> com foco em{" "}
+                <strong>.NET (C# / ASP.NET Core)</strong> e{" "}
+                <strong>TypeScript (React.js, Next.js, Node.js/Nest.js)</strong>
+                .
+              </p>
+              <p className="text-justify leading-tight">
+                Possuo experiência no desenvolvimento de{" "}
+                <strong>APIs REST</strong>, aplicações corporativas e soluções
+                web/mobile responsivas, incluindo autenticação de usuários,
+                integrações com bancos de dados relacionais e comunicação em
+                tempo real via <strong>WebSockets (Socket.io)</strong>.
+              </p>
+            </div>
+
+            <div className="text-white text-left">
+              <h3 className="text-2xl pl-2 font-bold text-left mb-2">
+                Formação
+              </h3>
+              <div className="flex flex-col gap-2 text-left leading-tight">
+                <p>
+                  <strong>Ciências contabeis</strong> (2017-2021): Curso
+                  concluído, registro no conselho em andamento
+                </p>
+                <p>
+                  <strong>Análise e desenvolvimento de sistemas</strong>{" "}
+                  (2022-2024): Curso concluído
+                </p>
+              </div>
+            </div>
+
+            <div className="text-white">
+              <h3 className="text-2xl font-bold pl-2 mb-2">Experiências</h3>
+              <div className="flex flex-col">
+                <p>
+                  <strong>Hooney Plus</strong> (junho de 2025-atualmente):
+                  Desenvolvedor Fullstack
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div className="text-left flex flex-col gap-4">
             <div className="w-[160px] h-[160px] rounded-full overflow-hidden mx-auto mb-4">
               <img
@@ -112,52 +161,6 @@ const AboutSection: React.FC = () => {
                   </div>
                 </div>
               )}
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-4 w-full h-full mx-auto text-white px-3 md:px-6 rounded">
-            <div>
-              <h2 className="text-4xl font-bold text-left mb-6 px-2">
-                Sobre mim
-              </h2>
-              <p className="text-justify leading-relaxed">
-                Olá, meu nome é <strong>Yuri Amaral Santos</strong>, tenho 25
-                anos e sou natural do Rio de Janeiro. Sou desenvolvedor{" "}
-                <strong>Full Stack</strong> com foco em{" "}
-                <strong>.NET (C# / ASP.NET Core)</strong> e{" "}
-                <strong>TypeScript (React.js, Next.js, Node.js/Nest.js)</strong>
-                . Possuo experiência no desenvolvimento de{" "}
-                <strong>APIs REST</strong>, aplicações corporativas e soluções
-                web/mobile responsivas, incluindo autenticação de usuários,
-                integrações com bancos de dados relacionais e comunicação em
-                tempo real via <strong>WebSockets (Socket.io)</strong>.
-              </p>
-            </div>
-
-            <div className="text-white text-left">
-              <h3 className="text-2xl pl-2 font-bold text-left mb-2">
-                Formação
-              </h3>
-              <div className="flex flex-col gap-2 text-left">
-                <p>
-                  <strong>Ciências contabeis</strong> (2017-2021): Curso
-                  concluído, registro no conselho em andamento
-                </p>
-                <p>
-                  <strong>Análise e desenvolvimento de sistemas</strong>{" "}
-                  (2022-2024): Curso concluído
-                </p>
-              </div>
-            </div>
-
-            <div className="text-white">
-              <h3 className="text-2xl font-semibold pl-2 mb-2">Experiências</h3>
-              <div className="flex flex-col">
-                <p>
-                  <strong>Hooney Plus</strong> (junho de 2025-atualmente):
-                  Desenvolvedor Fullstack
-                </p>
-              </div>
             </div>
           </div>
         </div>
