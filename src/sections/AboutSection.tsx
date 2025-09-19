@@ -1,3 +1,4 @@
+import React from "react";
 import {
   FaNodeJs,
   FaReact,
@@ -18,7 +19,19 @@ import { TbBrandCSharp } from "react-icons/tb";
 import { DiMongodb, DiMysql, DiPostgresql, DiDjango } from "react-icons/di";
 import { AiOutlineDotNet } from "react-icons/ai";
 
-const skillsData = {
+type SkillCategory =
+  | "frontend"
+  | "backend"
+  | "linguagens"
+  | "database"
+  | "outros";
+
+type SkillsData = Record<
+  SkillCategory,
+  React.ComponentType<{ className?: string }>[]
+>;
+
+const skillsData: SkillsData = {
   frontend: [FaReact, FaVuejs, SiTailwindcss, SiNextdotjs, FaAngular],
   backend: [FaNodeJs, SiSpring, SiFlask, AiOutlineDotNet, DiDjango],
   linguagens: [SiTypescript, FaPython, SiPhp, TbBrandCSharp],
@@ -26,10 +39,15 @@ const skillsData = {
   outros: [FaDocker],
 };
 
-const AboutSection = () => {
-  const orderedSections = ["backend", "frontend", "linguagens", "database"];
+const AboutSection: React.FC = () => {
+  const orderedSections: SkillCategory[] = [
+    "backend",
+    "frontend",
+    "linguagens",
+    "database",
+  ];
 
-  const renderSection = (key) => {
+  const renderSection = (key: SkillCategory) => {
     const skills = skillsData[key] || [];
     const title =
       key === "linguagens"
@@ -41,10 +59,9 @@ const AboutSection = () => {
         key={key}
         className="p-3 rounded-md bg-transparent flex flex-col items-start"
       >
-        <h4 className="text-sm font-semibold text-white  mb-4 capitalize">
+        <h4 className="text-sm font-semibold text-white mb-4 capitalize">
           {title}
         </h4>
-
         <div className="flex flex-wrap gap-3">
           {skills.map((Icon, i) => (
             <div
@@ -71,17 +88,14 @@ const AboutSection = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-
             <div>
               <h2 className="text-2xl text-white font-bold mb-2 pl-2">
                 Habilidades
               </h2>
-
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {orderedSections.map(renderSection)}
               </div>
-
-              {skillsData.outros && skillsData.outros.length > 0 && (
+              {skillsData.outros.length > 0 && (
                 <div className="mt-4 p-2">
                   <h4 className="text-sm font-semibold text-white mb-2">
                     Outros
@@ -100,7 +114,8 @@ const AboutSection = () => {
               )}
             </div>
           </div>
-          <div className="flex flex-col gap-4 w-full h-full mx-auto text-white px-3 md:px-6 rounded ">
+
+          <div className="flex flex-col gap-4 w-full h-full mx-auto text-white px-3 md:px-6 rounded">
             <div>
               <h2 className="text-4xl font-bold text-left mb-6 px-2">
                 Sobre mim
@@ -119,7 +134,7 @@ const AboutSection = () => {
               </p>
             </div>
 
-            <div className="text-white text-left ">
+            <div className="text-white text-left">
               <h3 className="text-2xl pl-2 font-bold text-left mb-2">
                 Formação
               </h3>
@@ -128,16 +143,16 @@ const AboutSection = () => {
                   <strong>Ciências contabeis</strong> (2017-2021): Curso
                   concluído, registro no conselho em andamento
                 </p>
-
                 <p>
-                  <strong>Análise e desenvolvimento de sistemas</strong>
+                  <strong>Análise e desenvolvimento de sistemas</strong>{" "}
                   (2022-2024): Curso concluído
                 </p>
               </div>
             </div>
+
             <div className="text-white">
               <h3 className="text-2xl font-semibold pl-2 mb-2">Experiências</h3>
-              <div className="flex flex-col ">
+              <div className="flex flex-col">
                 <p>
                   <strong>Hooney Plus</strong> (junho de 2025-atualmente):
                   Desenvolvedor Fullstack

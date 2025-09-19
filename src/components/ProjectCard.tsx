@@ -1,23 +1,27 @@
-import PropTypes from "prop-types";
 import { useState } from "react";
 
-const ProjectCard = ({ title, description, image, github, demo }) => {
+interface ProjectCardProps {
+  title: string;
+  description: string;
+  image?: string;
+  github: string;
+  demo?: string;
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({
+  title,
+  description,
+  image,
+  github,
+  demo,
+}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleClick = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
 
   return (
     <>
       <div
-        onClick={handleClick}
-        className="cursor-pointer border border-gray-500 rounded-lg w-full max-w-sm mx-auto flex flex-col items-center 
-        text-center transition-transform duration-300 hover:scale-105"
+        onClick={() => setIsModalOpen(true)}
+        className="cursor-pointer border border-gray-500 rounded-lg w-full max-w-sm mx-auto flex flex-col items-center text-center transition-transform duration-300 hover:scale-105"
       >
         {image && (
           <img
@@ -35,24 +39,26 @@ const ProjectCard = ({ title, description, image, github, demo }) => {
       {isModalOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
-          onClick={closeModal}
+          onClick={() => setIsModalOpen(false)}
         >
           <div
             className="bg-[#222236] border border-gray-500 rounded p-6 w-80 text-center relative"
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              onClick={closeModal}
+              onClick={() => setIsModalOpen(false)}
               className="absolute top-0 right-3 text-3xl hover:text-gray-400"
               aria-label="Fechar modal"
             >
               &times;
             </button>
+
             <div className="flex flex-col gap-4">
               <h3 className="text-lg font-semibold text-white">Descrição</h3>
               <p className="text-white text-justify min-h-[100px]">
                 {description}
               </p>
+
               <h3 className="text-lg font-semibold text-white">
                 Links do Projeto
               </h3>
@@ -82,14 +88,6 @@ const ProjectCard = ({ title, description, image, github, demo }) => {
       )}
     </>
   );
-};
-
-ProjectCard.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  image: PropTypes.string,
-  github: PropTypes.string.isRequired,
-  demo: PropTypes.string,
 };
 
 export default ProjectCard;

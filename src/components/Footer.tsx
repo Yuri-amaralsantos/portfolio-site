@@ -1,7 +1,8 @@
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+import React from "react";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer id="footer" className="relative text-white mt-12">
       <div

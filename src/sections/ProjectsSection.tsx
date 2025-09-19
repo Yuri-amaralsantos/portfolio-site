@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import ProjectCard from "../components/ProjectCard.jsx";
+import ProjectCard from "../components/ProjectCard";
 import projects from "../data/projects.json";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import type { Project } from "../types/IProject";
+import React from "react";
 
-const ProjectsSection = () => {
-  const maxProjects = projects.slice(0, 6);
-  const [isMobile, setIsMobile] = useState(false);
-  const [page, setPage] = useState(0);
+const ProjectsSection: React.FC = () => {
+  const maxProjects: Project[] = (projects as Project[]).slice(0, 6);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [page, setPage] = useState<number>(0);
 
   const projectsPerPage = 3;
   const totalPages = Math.ceil(maxProjects.length / projectsPerPage);

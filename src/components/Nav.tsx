@@ -1,17 +1,20 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import React from "react";
 
-const Nav = () => {
-  const [menuVisible, setMenuVisible] = useState(false);
+interface PageLink {
+  path: string;
+  label: string;
+}
+
+const Nav: React.FC = () => {
+  const [menuVisible, setMenuVisible] = useState<boolean>(false);
 
   const toggleMenu = () => setMenuVisible((prev) => !prev);
 
-  const pageLinks = [
+  const pageLinks: PageLink[] = [
     { path: "/", label: "Inicio" },
-    {
-      path: "/projects",
-      label: "Projetos",
-    },
+    { path: "/projects", label: "Projetos" },
   ];
 
   const renderLinks = (isMobile = false) => (
@@ -38,25 +41,25 @@ const Nav = () => {
           Yuri A. Santos
         </Link>
 
+        {/* Menu desktop */}
         <nav className="hidden md:flex items-center">
-          <nav className="hidden md:flex items-center">
-            {renderLinks()}
-            <a
-              href="#footer"
-              className="inline-block px-4 py-2 font-semibold hover:underline mr-6"
-            >
-              Contato
-            </a>
-            <a
-              href="curriculoti.pdf"
-              download
-              className="inline-block rounded bg-white text-black px-4 py-2 border border-white hover:bg-black hover:text-white font-semibold"
-            >
-              Currículo
-            </a>
-          </nav>
+          {renderLinks()}
+          <a
+            href="#footer"
+            className="inline-block px-4 py-2 font-semibold hover:underline mr-6"
+          >
+            Contato
+          </a>
+          <a
+            href="curriculoti.pdf"
+            download
+            className="inline-block rounded bg-white text-black px-4 py-2 border border-white hover:bg-black hover:text-white font-semibold"
+          >
+            Currículo
+          </a>
         </nav>
 
+        {/* Botão mobile */}
         <button
           onClick={toggleMenu}
           className="block md:hidden focus:outline-none text-3xl"
@@ -66,6 +69,7 @@ const Nav = () => {
         </button>
       </div>
 
+      {/* Menu mobile */}
       {menuVisible && (
         <div className="md:hidden bg-black text-white px-4 pb-4 space-y-2 shadow-inner max-h-screen overflow-y-auto">
           {renderLinks(true)}

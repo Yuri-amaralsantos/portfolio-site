@@ -1,15 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/homePage.jsx";
-import ProjectPage from "./pages/projectPage.jsx";
+import Home from "./pages/homePage";
+import ProjectPage from "./pages/projectPage";
 
-import Nav from "./components/Nav.jsx";
-import Footer from "./components/Footer.jsx";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 
-const AppRouter = () => {
+const AppRouter: React.FC = () => {
   return (
     <Router>
       <Nav />
-
       <div className="h-[60px]" />
       <Routes>
         <Route path="/" element={<Home />} />
