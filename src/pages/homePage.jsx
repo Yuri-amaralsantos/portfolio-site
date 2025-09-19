@@ -1,6 +1,6 @@
-import AboutSection from "../sections/AboutSection.jsx";
-import Header from "../sections/Header.jsx";
-import ProjectsSection from "../sections/ProjectsSection.jsx";
+import AboutSection from "../sections/AboutSection";
+import Header from "../sections/Header";
+import ProjectsSection from "../sections/ProjectsSection";
 
 const Home = () => {
   return (
