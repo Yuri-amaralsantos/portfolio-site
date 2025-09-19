@@ -6,7 +6,7 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 import importPlugin from 'eslint-plugin-import'
 
 export default [
-  { ignores: ['dist'] },
+  { ignores: ['dist', '.vercel'] },
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
@@ -43,9 +43,16 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
-      'import/no-unresolved': 'error',
-      'import/no-named-as-default': 'off',
-      'import/no-named-as-default-member': 'off',
+      "import/no-unresolved": "error",
+      "import/no-duplicates": "error",
+      "import/no-named-as-default": "off",
+      "import/no-named-as-default-member": "off",
+      "import/no-named-default": "off",
+      "import/no-cycle": "off",
+      "import/no-mutable-exports": "off",
+      "import/no-relative-parent-imports": "off",
+      "import/no-useless-path-segments": "error",
+      "import/extensions": ["error", "ignorePackages", { "js": "always", "jsx": "always" }]
     },
   },
 ]

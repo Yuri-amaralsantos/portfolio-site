@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import ProjectCard from "../components/ProjectCard";
+import ProjectCard from "../components/ProjectCard.jsx";
 import projects from "../data/projects.json";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
