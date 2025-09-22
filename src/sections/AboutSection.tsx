@@ -79,8 +79,17 @@ const AboutSection: React.FC = () => {
   return (
     <section className="flex justify-center  text-black my-4 py-24 px-4">
       <div className="flex flex-col gap-4 w-full border border-gray-500 rounded-xl max-w-[1000px]">
-        <div className="w-full grid grid-cols-[2fr_1fr] p-8 gap-6">
-          <div className="flex flex-col gap-4 w-full h-full mx-auto text-white px-3 md:px-6 rounded">
+        <div className="w-full grid grid-cols-1 md:grid-cols-[1fr_4fr] p-8 gap-4 md:divide-x divide-gray-500">
+          <div className="text-left flex flex-col  gap-4 pt-10 divide-y divide-gray-500">
+            <div className="w-[140px] h-[140px] overflow-hidden rounded-full mx-auto mb-4 ">
+              <img
+                src="/photo.jpg"
+                alt="Foto de perfil"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col gap-4 pt-10 w-full h-full mx-auto text-white px-3 md:px-6 rounded">
             <div>
               <h2 className="text-4xl font-bold text-left mb-6 px-2">
                 Sobre mim
@@ -127,18 +136,9 @@ const AboutSection: React.FC = () => {
                 </p>
               </div>
             </div>
-          </div>
 
-          <div className="text-left flex flex-col gap-4">
-            <div className="w-[160px] h-[160px] rounded-full overflow-hidden mx-auto mb-4">
-              <img
-                src="/photo.jpg"
-                alt="Foto de perfil"
-                className="w-full h-full object-cover"
-              />
-            </div>
             <div>
-              <h2 className="text-2xl text-white font-bold mb-2 pl-2">
+              <h2 className="text-2xl text-white font-bold mt-4 mb-2 pl-2">
                 Habilidades
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
