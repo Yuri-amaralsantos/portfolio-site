@@ -11,14 +11,14 @@ const Footer: React.FC = () => {
       />
 
       <div className="container mx-auto px-12 py-10 flex flex-col items-center gap-6 relative z-10">
-        <a href="#" className="text-3xl font-bold hover:text-blue-400">
+        <a href="#" className="text-3xl font-bold hover:text-blue-300">
           Yuri A. Santos
         </a>
         <div className="text-center md:text-right">
           <div className="flex justify-center md:justify-end space-x-6 text-gray-300">
             <a
               href="mailto:yuri.a.santos12@gmail.com"
-              className="hover:text-blue-400"
+              className="hover:text-blue-300"
             >
               <IoMdMail size={30} />
             </a>
@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
               href="https://www.linkedin.com/in/yuri-amaral-santos-17264a25b/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-500"
+              className="hover:text-blue-300"
             >
               <FaLinkedin size={30} />
             </a>
@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
               href="https://github.com/Yuri-amaralsantos"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-gray-400"
+              className="hover:text-blue-300"
             >
               <FaGithub size={30} />
             </a>
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
               href="https://wa.me/21986026955"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-green-500"
+              className="hover:text-blue-300"
             >
               <FaWhatsapp size={30} />
             </a>
