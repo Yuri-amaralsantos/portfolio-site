@@ -17,7 +17,7 @@ const Header: React.FC = () => {
         <div className="flex justify-center">
           <a
             href="mailto:yuri.a.santos12@gmail.com"
-            className="inline-block mt-6 rounded bg-white text-black px-4 py-2 font-bold border border-white transition duration-300 hover:bg-black hover:text-white"
+            className="inline-block mt-6 rounded bg-white text-[#222236] px-4 py-2 font-bold border border-white transition duration-300 hover:bg-[#222236] hover:text-white"
           >
             Entre em contato
           </a>

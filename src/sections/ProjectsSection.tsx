@@ -37,7 +37,8 @@ const ProjectsSection: React.FC = () => {
         {!isMobile && page > 0 && (
           <button
             onClick={handlePrev}
-            className="absolute -left-24 top-1/2 -translate-y-1/2 z-10 bg-black text-white p-3 rounded-full shadow hover:bg-white hover:text-black"
+            className="absolute -left-24 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow
+            text-[#222236]  border border-[#222236] hover:border-white hover:bg-[#222236] hover:text-white"
             aria-label="Anterior"
           >
             <FaChevronLeft size={20} />
@@ -46,7 +47,8 @@ const ProjectsSection: React.FC = () => {
         {!isMobile && page < totalPages - 1 && (
           <button
             onClick={handleNext}
-            className="absolute -right-24 top-1/2 -translate-y-1/2 z-10 bg-black text-white p-3 rounded-full shadow hover:bg-white hover:text-black"
+            className="absolute -right-24 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow
+             text-[#222236]  border border-[#222236] hover:border-white hover:bg-[#222236] hover:text-white"
             aria-label="Próximo"
           >
             <FaChevronRight size={20} />
@@ -70,7 +72,7 @@ const ProjectsSection: React.FC = () => {
       <div className="mt-6 text-center">
         <Link
           to="/projects"
-          className="inline-block px-6 py-2 font-bold rounded border hover:border-white hover:bg-black hover:text-white bg-white text-black transition"
+          className="inline-block px-6 py-2 font-bold rounded border hover:border-white hover:bg-[#222236] hover:text-white bg-white text-[#222236] transition"
         >
           Ver mais projetos
         </Link>

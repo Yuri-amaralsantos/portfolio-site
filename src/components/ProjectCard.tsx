@@ -67,7 +67,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                   href={github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block px-4 py-2 bg-white rounded border border-white text-black hover:bg-black hover:text-white"
+                  className="block px-4 py-2 bg-white rounded border border-white text-[#222236] hover:bg-[#222236] hover:text-white"
                 >
                   GitHub
                 </a>
@@ -77,7 +77,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                   href={demo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block px-4 py-2 bg-white rounded border border-white text-black hover:bg-black hover:text-white"
+                  className="block px-4 py-2 bg-white rounded border border-white text-[#222236] hover:bg-[#222236] hover:text-white"
                 >
                   Ver Demo
                 </a>

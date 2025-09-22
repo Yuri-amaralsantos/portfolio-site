@@ -41,7 +41,6 @@ const Nav: React.FC = () => {
           Yuri A. Santos
         </Link>
 
-        {/* Menu desktop */}
         <nav className="hidden md:flex items-center">
           {renderLinks()}
           <a
@@ -53,13 +52,12 @@ const Nav: React.FC = () => {
           <a
             href="curriculoti.pdf"
             download
-            className="inline-block rounded bg-white text-black px-4 py-2 border border-white hover:bg-black hover:text-white font-semibold"
+            className="inline-block rounded bg-white text-[#222236] px-4 py-2 border border-white hover:bg-[#222236] hover:text-white font-semibold"
           >
             Currículo
           </a>
         </nav>
 
-        {/* Botão mobile */}
         <button
           onClick={toggleMenu}
           className="block md:hidden focus:outline-none text-3xl"
@@ -69,7 +67,6 @@ const Nav: React.FC = () => {
         </button>
       </div>
 
-      {/* Menu mobile */}
       {menuVisible && (
         <div className="md:hidden bg-black text-white px-4 pb-4 space-y-2 shadow-inner max-h-screen overflow-y-auto">
           {renderLinks(true)}
