@@ -1,5 +1,12 @@
 [
   {
+    "title": "Sistema de Controle de Estoque e Movimentações",
+    "description": "Um sistema desenvolvido em Angular 20 utilizando Angular Material e Chart.js para gerenciamento de produtos, estoque e movimentações de um negócio.",
+    "image": "/projects/projeto2.png",
+    "demo": "https://business-app-angular.vercel.app/home",
+    "github": "https://github.com/Yuri-amaralsantos/businessAppAngular"
+  },
+  {
     "title": "Aplicativo de tarefas",
     "description": "O Task Manager foi desenvolvido com foco em produtividade e organização, oferecendo uma experiência intuitiva tanto para equipes quanto para usuários individuais.",
     "image": "/projects/projeto1.jpeg",
