@@ -1,5 +1,17 @@
 [
   {
+    "title": "Site de avaliação de livros",
+    "description": "Um site de avaliação de livros com frontend em Vue.js, backend em .NET Core, autenticação JWT, e banco de dados PostgreSQL. Os livros são obtidos diretamente da API do Google Books, permitindo busca e exibição detalhada de informações.",
+    "image": "/projects/projeto4.png",
+    "github": "https://github.com/Yuri-amaralsantos/dotnetBookSite"
+  },
+  {
+    "title": "Sistema de agendamento de reservas",
+    "description": "Uma aplicação de agendamento que permite aos usuários gerenciar reservas em slots disponíveis. O sistema possui autenticação JWT, controle de usuários, planejamento de slots e documentação Swagger.",
+    "image": "/projects/projeto3.png",
+    "github": "https://github.com/Yuri-amaralsantos/plannerJavaApi"
+  },
+  {
     "title": "Sistema de Controle de Estoque e Movimentações",
     "description": "Um sistema desenvolvido em Angular 20 utilizando Angular Material e Chart.js para gerenciamento de produtos, estoque e movimentações de um negócio.",
     "image": "/projects/projeto2.png",
