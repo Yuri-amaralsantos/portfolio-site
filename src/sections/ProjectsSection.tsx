@@ -31,7 +31,9 @@ const ProjectsSection: React.FC = () => {
 
   return (
     <section className="py-6 px-3 md:px-6 relative text-white z-20">
-      <h2 className="text-4xl font-semibold mb-10 text-center">Projetos</h2>
+      <h2 className="text-3xl font-semibold text-sky-500 mb-10 text-center">
+        Projetos
+      </h2>
 
       <div className="relative max-w-5xl mx-auto">
         {!isMobile && page > 0 && (
