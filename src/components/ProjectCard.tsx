@@ -21,7 +21,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     <>
       <div
         onClick={() => setIsModalOpen(true)}
-        className="cursor-pointer border border-gray-500 rounded-lg w-full max-w-sm mx-auto flex flex-col items-center text-center transition-transform duration-300 hover:scale-105"
+        className="cursor-pointer bg-black border border-gray-500 rounded-lg w-full max-w-sm mx-auto flex flex-col items-center text-center transition-transform duration-300 hover:scale-105"
       >
         {image && (
           <img

@@ -5,11 +5,6 @@ import React from "react";
 const Footer: React.FC = () => {
   return (
     <footer id="footer" className="relative text-white mt-12">
-      <div
-        className="absolute top-0 left-0 w-full h-full bg-cover bg-center pointer-events-none z-0"
-        style={{ backgroundImage: "url('/background1.jpg')" }}
-      />
-
       <div className="container mx-auto px-12 py-10 flex flex-col items-center gap-6 relative z-10">
         <a href="#" className="text-3xl font-bold hover:text-blue-300">
           Yuri A. Santos
