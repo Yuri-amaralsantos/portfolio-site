@@ -4,6 +4,7 @@ import ProjectPage from "./pages/projectPage";
 
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+import AboutPage from "./pages/AboutPage";
 
 const AppRouter: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const AppRouter: React.FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<ProjectPage />} />
+        <Route path="/about" element={<AboutPage />} />
       </Routes>
       <Footer />
     </Router>

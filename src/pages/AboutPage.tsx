@@ -39,7 +39,7 @@ const skillsData: SkillsData = {
   outros: [FaDocker],
 };
 
-const AboutSection: React.FC = () => {
+export const AboutPage: React.FC = () => {
   const orderedSections: SkillCategory[] = [
     "backend",
     "frontend",
@@ -158,4 +158,4 @@ const AboutSection: React.FC = () => {
   );
 };
 
-export default AboutSection;
+export default AboutPage;
