@@ -1,5 +1,11 @@
 [
   {
+    "title": "Aplicativo de anotações",
+    "description": "Um app em react native para salvar notas simples, tarefas e eventos no calendário.",
+    "image": "/projects/app1.jpeg",
+    "github": "https://github.com/Yuri-amaralsantos/reactNativeNoteApp"
+  },
+  {
     "title": "Site de avaliação de livros",
     "description": "Um site de avaliação de livros com frontend em Vue.js, backend em .NET Core, autenticação JWT, e banco de dados PostgreSQL. Os livros são obtidos diretamente da API do Google Books, permitindo busca e exibição detalhada de informações.",
     "image": "/projects/projeto4.png",

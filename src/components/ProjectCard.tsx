@@ -27,7 +27,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <img
             src={image}
             alt={`${title} image`}
-            className="w-full h-40 object-cover rounded-t-lg mb-4"
+            className="w-full h-40 object-contain rounded-t-lg mb-4"
           />
         )}
         <div className="p-2">
