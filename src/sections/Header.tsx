@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   return (
@@ -12,14 +13,28 @@ const Header: React.FC = () => {
           Desenvolvedor Fullstack
         </h2>
         <p className="text-xl text-center leading-snug">
-          Transformando ideias em código e código em soluções.
+          Transformando o código em soluções que elevam a experiência do
+          usuário.
         </p>
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-12 flex gap-4">
           <a
             href="mailto:yuri.a.santos12@gmail.com"
-            className="inline-block mt-6 rounded bg-white text-[#222236] px-4 py-2 font-bold border border-white transition duration-300 hover:bg-[#222236] hover:text-white"
+            className="inline-block rounded bg-white text-[#222236] px-4 py-2 font-bold border border-white transition duration-300 hover:bg-[#222236] hover:text-white"
           >
             Entre em contato
+          </a>
+          <Link
+            to="/projects"
+            className="inline-block px-6 py-2 font-bold rounded border hover:border-white hover:bg-[#222236] hover:text-white bg-white text-[#222236] transition"
+          >
+            Ver mais projetos
+          </Link>
+          <a
+            href="curriculoti.pdf"
+            download
+            className="block rounded px-4 py-2 bg-white border hover:border-white hover:bg-[#222236] hover:text-white text-black font-bold"
+          >
+            Currículo
           </a>
         </div>
       </div>
