@@ -42,11 +42,11 @@ const Nav: React.FC = () => {
                 key={path}
                 to={path}
                 className={`
-                  flex-1 text-center rounded-lg px-4 py-3 font-semibold transition hover:bg-gray-300
+                  flex-1 text-center px-4 py-3 font-semibold transition hover:bg-gray-300
                   ${
                     pathname === path
-                      ? "text-sky-400 bg-gray-200"
-                      : "text-white"
+                      ? "text-sky-400 border-b-2 border-sky-400"
+                      : "text-white border-b-2 border-transparent"
                   }
                 `}
               >
