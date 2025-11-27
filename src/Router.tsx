@@ -10,7 +10,6 @@ const AppRouter: React.FC = () => {
   return (
     <Router>
       <Nav />
-      <div className="h-[60px]" />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<ProjectPage />} />

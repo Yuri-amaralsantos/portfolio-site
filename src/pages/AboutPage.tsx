@@ -6,6 +6,8 @@ import {
   FaAngular,
   FaPython,
   FaDocker,
+  FaJava,
+  FaLaravel,
 } from "react-icons/fa";
 import {
   SiTailwindcss,
@@ -19,6 +21,11 @@ import { TbBrandCSharp } from "react-icons/tb";
 import { DiMongodb, DiMysql, DiPostgresql, DiDjango } from "react-icons/di";
 import { AiOutlineDotNet } from "react-icons/ai";
 
+type SkillItem = {
+  icon: React.ComponentType<{ className?: string }>;
+  label: string;
+};
+
 type SkillCategory =
   | "frontend"
   | "backend"
@@ -26,132 +33,148 @@ type SkillCategory =
   | "database"
   | "outros";
 
-type SkillsData = Record<
-  SkillCategory,
-  React.ComponentType<{ className?: string }>[]
->;
+type SkillsData = Record<SkillCategory, SkillItem[]>;
 
 const skillsData: SkillsData = {
-  frontend: [FaReact, FaVuejs, SiTailwindcss, SiNextdotjs, FaAngular],
-  backend: [FaNodeJs, SiSpring, SiFlask, AiOutlineDotNet, DiDjango],
-  linguagens: [SiTypescript, FaPython, SiPhp, TbBrandCSharp],
-  database: [DiMongodb, DiMysql, DiPostgresql],
-  outros: [FaDocker],
+  frontend: [
+    { icon: FaReact, label: "React" },
+    { icon: FaVuejs, label: "Vue.js" },
+    { icon: SiTailwindcss, label: "TailwindCSS" },
+    { icon: SiNextdotjs, label: "Next.js" },
+    { icon: FaAngular, label: "Angular" },
+  ],
+  backend: [
+    { icon: FaNodeJs, label: "Node.js" },
+    { icon: SiSpring, label: "Spring" },
+    { icon: SiFlask, label: "Flask" },
+    { icon: AiOutlineDotNet, label: ".NET Core" },
+    { icon: DiDjango, label: "Django" },
+    { icon: FaLaravel, label: "Laravel" },
+  ],
+  linguagens: [
+    { icon: SiTypescript, label: "TypeScript" },
+    { icon: FaPython, label: "Python" },
+    { icon: SiPhp, label: "PHP" },
+    { icon: TbBrandCSharp, label: "C#" },
+    { icon: FaJava, label: "Java" },
+  ],
+  database: [
+    { icon: DiMongodb, label: "MongoDB" },
+    { icon: DiMysql, label: "MySQL" },
+    { icon: DiPostgresql, label: "PostgreSQL" },
+  ],
+  outros: [{ icon: FaDocker, label: "Docker" }],
 };
 
-export const AboutPage: React.FC = () => {
-  const orderedSections: SkillCategory[] = [
-    "backend",
-    "frontend",
-    "linguagens",
-    "database",
-  ];
-
-  const renderSection = (key: SkillCategory) => {
-    const skills = skillsData[key] || [];
-    const title =
-      key === "linguagens"
-        ? "Linguagens"
-        : key.charAt(0).toUpperCase() + key.slice(1);
-
-    return (
-      <div
-        key={key}
-        className="p-3 rounded-md bg-transparent flex flex-col items-start border border-gray-500 rounded-xl"
-      >
-        <h4 className=" font-semibold text-white mb-4 capitalize">{title}</h4>
-        <div className="flex flex-wrap gap-3">
-          {skills.map((Icon, i) => (
-            <div
-              key={`${key}-${i}`}
-              className="w-12 flex flex-col items-center text-center"
-            >
-              <Icon className="text-white text-2xl hover:scale-110 transition-transform duration-200" />
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  };
-
+const AboutPage: React.FC = () => {
   return (
-    <section className="flex flex-col gap-10 justify-center  text-black my-4 py-24 px-4">
-      <div className="flex flex-col gap-10 py-10 w-full h-full mx-auto text-white px-3 md:px-6 border border-gray-500 rounded-xl max-w-[1000px]">
-        <div className="w-[140px] h-[140px] overflow-hidden rounded-full mx-auto mb-4 ">
-          <img
-            src="/photo.jpg"
-            alt="Foto de perfil"
-            className="w-full h-full object-cover"
-          />
+    <section className="text-white px-6 md:px-20 py-12 flex flex-col gap-16 max-w-[1200px] mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="flex justify-center">
+          <div className="w-[180px] h-[180px] md:w-[260px] md:h-[260px] rounded-full overflow-hidden shadow-lg shadow-sky-500/20">
+            <img
+              src="/photo.jpg"
+              alt="Foto de perfil"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
+
         <div>
-          <h2 className="text-4xl font-bold text-left mb-1 px-2">Sobre mim</h2>
-          <hr className="mb-3" />
-          <p className="text-justify leading-snug mb-2">
-            Olá, meu nome é <strong>Yuri Amaral Santos</strong>, tenho 25 anos e
-            sou natural do Rio de Janeiro. Sou desenvolvedor{" "}
-            <strong>Full Stack</strong> com foco em{" "}
-            <strong>.NET (C# / ASP.NET Core)</strong> e{" "}
-            <strong>TypeScript (React.js, Next.js, Node.js/Nest.js)</strong>.
+          <h2 className="text-4xl font-bold mb-4">Sobre mim</h2>
+          <p className="text-justify leading-relaxed mb-4 text-gray-300">
+            Olá, meu nome é{" "}
+            <strong className="text-sky-300">Yuri Amaral Santos</strong>, tenho
+            25 anos e sou Desenvolvedor <strong>Full Stack</strong> com foco em
+            <strong> React/Next</strong> e <strong>Nest/TypeScript</strong>.
           </p>
-          <p className="text-justify leading-snug">
-            Possuo experiência no desenvolvimento de <strong>APIs REST</strong>,
-            aplicações corporativas e soluções web/mobile responsivas, incluindo
-            autenticação de usuários, integrações com bancos de dados
-            relacionais e comunicação em tempo real via{" "}
-            <strong>WebSockets (Socket.io)</strong>.
+          <p className="text-justify leading-relaxed text-gray-300">
+            Tenho experiência com <strong>APIs REST</strong>, aplicações
+            corporativas, integrações com bancos de dados e comunicação em tempo
+            real via
+            <strong> WebSockets</strong>. Busco sempre aprimorar meu código e
+            entregar soluções robustas.
           </p>
-        </div>
-
-        <div className="text-white text-left">
-          <h3 className="text-2xl pl-2 font-bold text-left mb-2">Formação</h3>
-          <hr className="mb-2" />
-          <div className="flex flex-col gap-2 text-left leading-snug">
-            <p>
-              <strong>Ciências contabeis</strong> (2017-2021): Curso concluído,
-              registro no conselho em andamento
-            </p>
-            <p>
-              <strong>Análise e desenvolvimento de sistemas</strong>{" "}
-              (2022-2024): Curso concluído
-            </p>
-          </div>
-        </div>
-
-        <div className="text-white">
-          <h3 className="text-2xl font-bold pl-2 mb-2">Experiências</h3>
-          <hr className="mb-2" />
-          <div className="flex flex-col">
-            <p>
-              <strong>Hooney Plus</strong> (junho de 2025-atualmente):
-              Desenvolvedor Fullstack
-            </p>
-          </div>
         </div>
       </div>
-      <div className="flex flex-col gap-4 py-10 w-full h-full mx-auto text-white px-3 md:px-6 border border-gray-500 rounded-xl max-w-[1000px]">
-        <div>
-          <h2 className="text-4xl text-center text-white font-bold mt-4 mb-6 ">
-            Habilidades
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
-            {orderedSections.map(renderSection)}
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="border border-sky-500 rounded-xl p-6 backdrop-blur-sm bg-white/5">
+          <h3 className="text-2xl font-bold mb-4">Experiência</h3>
+
+          <div className="flex flex-col gap-3">
+            <div>
+              <p className="text-lg">
+                <strong>Hooney Plus</strong>
+              </p>
+              <span className="text-gray-400 text-sm">2025 - Atual</span>
+              <p className="text-gray-300 text-sm">
+                Desenvolvedor Fullstack trabalhando com .NET, React e
+                integrações corporativas.
+              </p>
+            </div>
           </div>
-          {skillsData.outros.length > 0 && (
-            <div className="mt-4 p-3 border border-gray-500 rounded-xl">
-              <h4 className="font-semibold text-white mb-2">Outros</h4>
-              <div className="flex gap-3">
-                {skillsData.outros.map((Icon, i) => (
+        </div>
+
+        <div className="border border-sky-500 rounded-xl p-6 backdrop-blur-sm bg-white/5">
+          <h3 className="text-2xl font-bold mb-4">Formação</h3>
+
+          <p className="mb-3">
+            <strong>Ciências Contábeis</strong> — Concluído
+          </p>
+          <p>
+            <strong>Análise e Desenvolvimento de Sistemas</strong> — Concluído
+          </p>
+        </div>
+      </div>
+
+      <div className="text-center">
+        <h2 className="text-4xl font-bold mb-8">Hard Skills</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {Object.entries(skillsData).map(([category, items]) => (
+            <div key={category}>
+              <h4 className="text-xl font-semibold mb-4 capitalize">
+                {category === "linguagens" ? "Linguagens" : category}
+              </h4>
+
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                {items.map(({ icon: Icon, label }, idx) => (
                   <div
-                    key={`outros-${i}`}
-                    className="w-24 flex flex-col items-center"
+                    key={idx}
+                    className="flex flex-col items-center p-3 rounded-lg bg-[#1b1e2d] 
+                    border border-sky-500/40 hover:border-sky-300 hover:scale-105 
+                    transition"
                   >
-                    <Icon className="text-white text-2xl" />
+                    <Icon className="text-3xl text-sky-300 mb-2" />
+                    <p className="text-xs text-gray-300">{label}</p>
                   </div>
                 ))}
               </div>
             </div>
-          )}
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-10">
+        <h2 className="text-4xl font-bold text-center mb-8">Soft Skills</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {[
+            "Comunicação",
+            "Trabalho em equipe",
+            "Resolução de problemas",
+            "Proatividade",
+            "Adaptabilidade",
+            "Aprendizado rápido",
+          ].map((skill, i) => (
+            <div
+              key={i}
+              className="p-4 border border-sky-500 rounded-lg bg-white/5 backdrop-blur-sm text-center"
+            >
+              <p className="text-lg font-medium text-gray-200">{skill}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

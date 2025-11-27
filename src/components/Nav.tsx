@@ -34,7 +34,7 @@ const Nav: React.FC = () => {
         </div>
       </div>
 
-      <nav className="bg-[#141414] w-full mt-2 px-6">
+      <nav className="bg-[#141414] w-full mt-2 mb-12 px-6">
         <div className="w-full hidden md:flex items-center gap-3">
           <div className="w-full flex gap-2">
             {pageLinks.map(({ path, label }) => (
