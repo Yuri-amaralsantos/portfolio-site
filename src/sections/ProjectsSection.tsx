@@ -39,8 +39,8 @@ const ProjectsSection: React.FC = () => {
         {!isMobile && page > 0 && (
           <button
             onClick={handlePrev}
-            className="absolute -left-24 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow
-            text-[#222236]  border border-[#222236] hover:border-white hover:bg-[#222236] hover:text-white"
+            className="absolute -left-24 top-1/2 -translate-y-1/2 z-10 bg-sky-500 p-3 rounded-full 
+            text-white"
             aria-label="Anterior"
           >
             <FaChevronLeft size={20} />
@@ -49,8 +49,8 @@ const ProjectsSection: React.FC = () => {
         {!isMobile && page < totalPages - 1 && (
           <button
             onClick={handleNext}
-            className="absolute -right-24 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow
-             text-[#222236]  border border-[#222236] hover:border-white hover:bg-[#222236] hover:text-white"
+            className="absolute -right-24 top-1/2 -translate-y-1/2 z-10 bg-sky-500 p-3 rounded-full 
+             text-white "
             aria-label="Próximo"
           >
             <FaChevronRight size={20} />
@@ -59,14 +59,7 @@ const ProjectsSection: React.FC = () => {
 
         <div className="grid px-12 gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center">
           {displayedProjects.map((project, index) => (
-            <ProjectCard
-              key={index}
-              title={project.title}
-              description={project.description}
-              image={project.image}
-              github={project.github}
-              demo={project.demo}
-            />
+            <ProjectCard key={index} {...project} />
           ))}
         </div>
       </div>

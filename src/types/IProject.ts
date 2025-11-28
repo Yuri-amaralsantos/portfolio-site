@@ -4,4 +4,5 @@ export interface Project {
   image?: string;
   github: string;
   demo?: string;
+  tags?: string[];
 }

@@ -1,19 +1,13 @@
 import { useState } from "react";
+import { Project } from "../types/IProject";
 
-interface ProjectCardProps {
-  title: string;
-  description: string;
-  image?: string;
-  github: string;
-  demo?: string;
-}
-
-const ProjectCard: React.FC<ProjectCardProps> = ({
+const ProjectCard: React.FC<Project> = ({
   title,
   description,
   image,
   github,
   demo,
+  tags,
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -21,19 +15,35 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     <>
       <div
         onClick={() => setIsModalOpen(true)}
-        className="cursor-pointer bg-black border border-gray-500 rounded-lg w-full max-w-sm mx-auto flex flex-col items-center text-center transition-transform duration-300 hover:scale-105"
+        className="cursor-pointer py-3 px-3 bg-slate-800 border border-sky-500 rounded-xl w-full max-w-md mx-auto 
+  grid grid-rows-[auto_1fr_auto] grid-cols-1 h-80 gap-3 hover:scale-105 transition-transform duration-300"
       >
-        {image && (
-          <img
-            src={image}
-            alt={`${title} image`}
-            className="w-full h-40 object-contain rounded-t-lg mb-4"
-          />
-        )}
-        <div className="p-2">
-          <hr className="mb-4 border-gray-500" />
-          <h3 className="text-lg text-white mb-2">{title}</h3>
+        <h3 className="font-bold text-left text-white">{title}</h3>
+
+        <div className="flex items-center justify-center">
+          {image && (
+            <img
+              src={image}
+              alt={`${title} image`}
+              className="max-h-40 object-contain"
+            />
+          )}
         </div>
+
+        {tags && tags.length > 0 ? (
+          <div className="flex flex-wrap gap-1 justify-center items-center">
+            {tags.map((tag, i) => (
+              <span
+                key={i}
+                className="text-xs font-semibold p-1 bg-sky-700 rounded text-white"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        ) : (
+          <p className="text-right text-white">Sem marcadores</p>
+        )}
       </div>
 
       {isModalOpen && (
@@ -47,7 +57,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           >
             <button
               onClick={() => setIsModalOpen(false)}
-              className="absolute top-0 right-3 text-3xl hover:text-gray-400"
+              className="absolute top-0 right-3 text-3xl text-white hover:text-gray-400"
               aria-label="Fechar modal"
             >
               &times;

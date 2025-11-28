@@ -3,52 +3,60 @@
     "title": "Aplicativo de anotações",
     "description": "Um app em react native para salvar notas simples, tarefas e eventos no calendário.",
     "image": "/projects/app1.jpeg",
-    "github": "https://github.com/Yuri-amaralsantos/reactNativeNoteApp"
+    "github": "https://github.com/Yuri-amaralsantos/reactNativeNoteApp",
+    "tags": ["React Native", "Mobile", "Context API", "AsyncStorage"]
   },
   {
     "title": "Site de avaliação de livros",
     "description": "Um site de avaliação de livros com frontend em Vue.js, backend em .NET Core, autenticação JWT, e banco de dados PostgreSQL. Os livros são obtidos diretamente da API do Google Books, permitindo busca e exibição detalhada de informações.",
     "image": "/projects/projeto4.png",
-    "github": "https://github.com/Yuri-amaralsantos/dotnetBookSite"
+    "github": "https://github.com/Yuri-amaralsantos/dotnetBookSite",
+    "tags": ["Vue.js", ".NET Core", "PostgreSQL", "JWT", "Google Books API"]
   },
   {
     "title": "Sistema de agendamento de reservas",
     "description": "Uma aplicação de agendamento que permite aos usuários gerenciar reservas em slots disponíveis. O sistema possui autenticação JWT, controle de usuários, planejamento de slots e documentação Swagger.",
     "image": "/projects/projeto3.png",
-    "github": "https://github.com/Yuri-amaralsantos/plannerJavaApi"
+    "github": "https://github.com/Yuri-amaralsantos/plannerJavaApi",
+    "tags": ["Java", "Spring Boot", "JWT", "Swagger", "PostgreSQL"]
   },
   {
     "title": "Sistema de Controle de Estoque e Movimentações",
     "description": "Um sistema desenvolvido em Angular 20 utilizando Angular Material e Chart.js para gerenciamento de produtos, estoque e movimentações de um negócio.",
     "image": "/projects/projeto2.png",
     "demo": "https://business-app-angular.vercel.app/home",
-    "github": "https://github.com/Yuri-amaralsantos/businessAppAngular"
+    "github": "https://github.com/Yuri-amaralsantos/businessAppAngular",
+    "tags": ["Angular 20", "Material", "Chart.js", "TypeScript"]
   },
   {
     "title": "Aplicativo de tarefas",
     "description": "O Task Manager foi desenvolvido com foco em produtividade e organização, oferecendo uma experiência intuitiva tanto para equipes quanto para usuários individuais.",
     "image": "/projects/projeto1.jpeg",
     "demo": "https://task-manager-frontend-eight-teal.vercel.app/",
-    "github": "https://github.com/Yuri-amaralsantos/TaskManager-frontend"
+    "github": "https://github.com/Yuri-amaralsantos/TaskManager-frontend",
+    "tags": ["React", "Redux", "TypeScript", "REST API"]
   },
   {
     "title": "Portal Abrams",
     "description": "Um portal educacional da ong Instituto Abrams com cursos, questões e jogos. Foi desenvolvovido utilizando react e supabase.",
     "image": "/projects/site7.png",
     "demo": "https://portalabrams.vercel.app/home",
-    "github": "https://github.com/Yuri-amaralsantos/portalEducOng"
+    "github": "https://github.com/Yuri-amaralsantos/portalEducOng",
+    "tags": ["React", "Supabase", "Tailwind", "Auth"]
   },
   {
     "title": "Learn Notes",
     "description": "Um aplicativo web desenvolvido em React que permite criar e organizar suas anotações de forma prática.",
     "image": "/projects/site2.png",
     "demo": "https://wiki-study-app-polo.vercel.app",
-    "github": "https://github.com/Yuri-amaralsantos/wikiStudyApp"
+    "github": "https://github.com/Yuri-amaralsantos/wikiStudyApp",
+    "tags": ["React", "TypeScript", "LocalStorage", "SPA"]
   },
   {
     "title": "Chat em Tempo Real",
     "description": "Um aplicativo de chat em tempo real, com autenticação JWT, WebSockets (Socket.io) e PostgreSQL.",
     "image": "/projects/site3.png",
-    "github": "https://github.com/Yuri-amaralsantos/javascriptChatApp"
+    "github": "https://github.com/Yuri-amaralsantos/javascriptChatApp",
+    "tags": ["Node.js", "Socket.io", "PostgreSQL", "JWT", "Express"]
   }
 ]

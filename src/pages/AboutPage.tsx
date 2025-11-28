@@ -99,7 +99,7 @@ const AboutPage: React.FC = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div className="border border-sky-500 rounded-xl p-6 backdrop-blur-sm bg-white/5">
+        <div className="border border-sky-500 rounded-xl p-6 backdrop-blur-sm bg-slate-800">
           <h3 className="text-2xl font-bold mb-4">Experiência</h3>
 
           <div className="flex flex-col gap-3">
@@ -116,7 +116,7 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
 
-        <div className="border border-sky-500 rounded-xl p-6 backdrop-blur-sm bg-white/5">
+        <div className="border border-sky-500 rounded-xl p-6 backdrop-blur-sm bg-slate-800">
           <h3 className="text-2xl font-bold mb-4">Formação</h3>
 
           <p className="mb-3">
@@ -142,8 +142,8 @@ const AboutPage: React.FC = () => {
                 {items.map(({ icon: Icon, label }, idx) => (
                   <div
                     key={idx}
-                    className="flex flex-col items-center p-3 rounded-lg bg-[#1b1e2d] 
-                    border border-sky-500/40 hover:border-sky-300 hover:scale-105 
+                    className="flex flex-col items-center p-3 rounded-lg bg-slate-800 
+                    border border-sky-500 hover:border-sky-200 hover:scale-105 
                     transition"
                   >
                     <Icon className="text-3xl text-sky-300 mb-2" />
@@ -170,7 +170,7 @@ const AboutPage: React.FC = () => {
           ].map((skill, i) => (
             <div
               key={i}
-              className="p-4 border border-sky-500 rounded-lg bg-white/5 backdrop-blur-sm text-center"
+              className="p-4 border border-sky-500 rounded-lg bg-slate-800 backdrop-blur-sm text-center"
             >
               <p className="text-lg font-medium text-gray-200">{skill}</p>
             </div>
