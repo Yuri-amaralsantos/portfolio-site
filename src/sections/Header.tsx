@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   return (
-    <header className="relative w-full  mt-16 mb-12 overflow-hidden flex items-center justify-center">
+    <header className="relative w-full  mt-36 mb-12 overflow-hidden flex items-center justify-center">
       <div className="relative z-10  flex flex-col gap-6 justify-center md:text-left pl-2 max-w-5xl">
-        <h2 className="text-6xl font-semibold text-white text-center">
+        <h2 className="text-5xl font-semibold text-white text-center">
           YURI AMARAL SANTOS
         </h2>
-        <p className="text-lg max-w-md mx-auto text-center text-slate-300 leading-snug">
+        <p className="text-lg max-w-md mx-auto mb-8 text-center text-slate-300 leading-snug">
           Transformando o código em soluções que elevam a experiência do
           usuário.
         </p>
