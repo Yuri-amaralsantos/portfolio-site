@@ -82,6 +82,9 @@ const AboutPage: React.FC = () => {
 
         <div>
           <h2 className="text-4xl font-bold mb-4">Sobre mim</h2>
+          <div className="absolute inset-40 z-0 flex justify-center">
+            <div className="w-[700px] h-[700px] bg-blue-500/15  blur-2xl rounded-full"></div>
+          </div>
           <p className="text-justify leading-relaxed mb-4 text-gray-300">
             Olá, meu nome é{" "}
             <strong className="text-sky-300">Yuri Amaral Santos</strong>, tenho

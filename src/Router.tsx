@@ -5,6 +5,7 @@ import ProjectPage from "./pages/projectPage";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import AboutPage from "./pages/AboutPage";
+import GamePage from "./pages/gamePage";
 
 const AppRouter: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const AppRouter: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<ProjectPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/games" element={<GamePage />} />
       </Routes>
       <Footer />
     </Router>
