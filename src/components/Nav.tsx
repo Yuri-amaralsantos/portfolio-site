@@ -11,13 +11,12 @@ const Nav: React.FC = () => {
   const [menuVisible, setMenuVisible] = useState<boolean>(false);
   const toggleMenu = () => setMenuVisible((prev) => !prev);
 
-  const { pathname } = useLocation(); // 👈 ROTA ATUAL
+  const { pathname } = useLocation();
 
   const pageLinks: PageLink[] = [
     { path: "/", label: "Inicio" },
     { path: "/about", label: "Sobre" },
     { path: "/projects", label: "Projetos" },
-    { path: "/games", label: "Jogos" },
   ];
 
   return (
