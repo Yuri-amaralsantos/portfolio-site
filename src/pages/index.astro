@@ -1,0 +1,65 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+
+import HeroSection from "../components/sections/HeroSection.astro";
+import ExperienceSection from "../components/sections/ExperienceSection.astro";
+import StackSection from "../components/sections/StackSection.astro";
+import ProjectsSection from "../components/sections/ProjectsSection.astro";
+import EducationSection from "../components/sections/EducationSection.astro";
+import ContactSection from "../components/sections/ContactSection.astro";
+
+import {
+  profile,
+  experience,
+  technologies,
+  stack,
+  projects,
+  education,
+  languages,
+} from "../data/portfolio.js";
+
+import "../styles/global.css";
+import LanguagesSection from "../components/sections/LanguagesSection.astro";
+---
+
+<Layout title={`${profile.name} — ${profile.role}`}>
+  <Navbar />
+
+  <main>
+    <!-- 1. APRESENTAÇÃO -->
+    <HeroSection
+      profile={profile}
+      technologies={technologies}
+    />
+
+    <!-- 2. EXPERIÊNCIA PROFISSIONAL -->
+    <ExperienceSection
+      experience={experience}
+    />
+
+    <!-- 3. PROJETOS -->
+    <ProjectsSection
+      projects={projects}
+    />
+
+    <!-- 4. STACK -->
+    <StackSection
+      stack={stack}
+    />
+
+    <!-- 5. FORMAÇÃO -->
+    <EducationSection
+      education={education}
+    />
+
+
+    <!-- 6. IDIOMAS -->
+    <LanguagesSection languages={languages} />
+
+    <!-- 7. CONTATO -->
+    <ContactSection
+      profile={profile}
+    />
+  </main>
+</Layout>

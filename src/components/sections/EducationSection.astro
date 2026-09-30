@@ -1,0 +1,128 @@
+---
+const { education } = Astro.props;
+---
+
+<section
+  id="education"
+  class="section container"
+>
+  <div class="section-heading">
+    <span class="eyebrow">
+      Formação
+    </span>
+
+    <h2>
+      Formação acadêmica
+    </h2>
+  </div>
+
+  <div class="education-list">
+    {
+      education.map((item: any) => (
+        <article class="education-card">
+          <div class="education-content">
+            <h3>{item.course}</h3>
+
+            <p class="institution">
+              {item.institution}
+            </p>
+          </div>
+
+          <div class="education-meta">
+            <span class="period">
+              {item.period}
+            </span>
+
+            <span class="status">
+              {item.status}
+            </span>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.education-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+
+  padding: 22px 24px;
+
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+
+  background: var(--color-white);
+}
+
+.education-content {
+  min-width: 0;
+}
+
+.education-card h3 {
+  margin: 0 0 5px;
+
+  color: var(--color-text);
+
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.institution {
+  margin: 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.9rem;
+}
+
+.education-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  flex-shrink: 0;
+}
+
+.period {
+  color: var(--color-text-muted);
+
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.status {
+  padding: 5px 9px;
+
+  border-radius: 999px;
+
+  background: var(--color-tag-background);
+  color: var(--color-tag-text);
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .education-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .education-meta {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+</style>

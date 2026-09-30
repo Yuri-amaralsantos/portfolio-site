@@ -1,0 +1,323 @@
+:root {
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: var(--color-text);
+  background: var(--color-background);
+
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+
+  background: var(--color-background);
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: min(1100px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+/* HERO */
+
+.hero {
+  min-height: calc(100vh - 80px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+
+.eyebrow {
+  color: var(--color-blue);
+
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+h1 {
+  max-width: 950px;
+
+  margin: 14px 0 8px;
+
+  color: var(--color-text);
+
+  font-size: clamp(3.2rem, 8vw, 6.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.065em;
+}
+
+.hero h2 {
+  max-width: 850px;
+
+  margin: 10px 0 20px;
+
+  color: var(--color-text);
+
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+}
+
+.hero-description {
+  max-width: 700px;
+
+  margin: 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin-top: 28px;
+}
+
+.button,
+.secondary-button {
+  display: inline-block;
+
+  padding: 12px 18px;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+  transition:
+    transform 0.2s,
+    opacity 0.2s,
+    border-color 0.2s;
+}
+
+.button {
+  background: var(--color-blue);
+  color: var(--color-white);
+}
+
+.secondary-button {
+  border: 1px solid var(--color-border);
+
+  color: var(--color-text);
+
+  background: var(--color-white);
+}
+
+.button:hover,
+.secondary-button:hover {
+  transform: translateY(-2px);
+}
+
+.secondary-button:hover {
+  border-color: var(--color-blue);
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-top: 45px;
+}
+
+.technologies span {
+  padding: 7px 11px;
+
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+
+  background: var(--color-background-secondary);
+
+  color: var(--color-text-muted);
+
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* SECTIONS */
+
+.section {
+  padding: 100px 0;
+}
+
+.section-heading {
+  max-width: 750px;
+
+  margin-bottom: 35px;
+}
+
+.section-heading h2 {
+  margin: 10px 0 14px;
+
+  color: var(--color-text);
+
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.muted {
+  color: var(--color-text-muted);
+
+  line-height: 1.7;
+}
+
+/* EXPERIENCE */
+
+.experience-card {
+  padding: 30px;
+
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+
+  background: var(--color-white);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 20px;
+}
+
+.experience-header h3 {
+  margin: 0 0 5px;
+
+  font-size: 1.4rem;
+}
+
+.experience-header p {
+  margin: 0;
+
+  color: var(--color-blue);
+
+  font-weight: 700;
+}
+
+.period {
+  color: var(--color-text-light);
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.experience-description {
+  max-width: 800px;
+
+  margin: 25px 0;
+
+  color: var(--color-text-muted);
+
+  line-height: 1.7;
+}
+
+.experience-card ul {
+  display: grid;
+
+  gap: 10px;
+
+  margin: 0;
+  padding-left: 20px;
+
+  color: var(--color-text-muted);
+
+  line-height: 1.6;
+}
+
+.experience-card li::marker {
+  color: var(--color-blue);
+}
+
+/* PROJECTS */
+
+.grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+  .container {
+    width: min(100% - 32px, 1100px);
+  }
+
+  .hero {
+    min-height: calc(100vh - 70px);
+
+    padding-top: 40px;
+  }
+
+  .section {
+    padding: 70px 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-header {
+    flex-direction: column;
+  }
+
+  .period {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: clamp(2.8rem, 15vw, 4.5rem);
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
+  .button,
+  .secondary-button {
+    text-align: center;
+  }
+
+  .experience-card {
+    padding: 22px;
+  }
+}

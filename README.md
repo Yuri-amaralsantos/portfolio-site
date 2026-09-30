@@ -1,42 +1,20 @@
-# Portfólio Pessoal
+# Astro Portfolio
 
-Este é o meu portfólio pessoal, desenvolvido com **React** e **Vite**. O objetivo deste projeto é apresentar meus projetos, habilidades e experiências como desenvolvedor.
+Portfólio simples criado com Astro + JavaScript + CSS.
 
-## Tecnologias Utilizadas
-- **React**: Biblioteca JavaScript para construir interfaces de usuário.
-- **Vite**: Ferramenta de build e desenvolvimento rápido para projetos modernos.
-- **CSS**: Estilização e design responsivo.
+## Instalação
 
-## Como Rodar o Projeto
+```bash
+pnpm install
+pnpm dev
+```
 
-1. Clone o repositório:
-   git clone https://github.com/Yuri-amaralsantos/portfolio.git
-   
-2. Navegue até o diretório do projeto:
-cd portfolio
+Abra o endereço exibido pelo Astro, normalmente `http://localhost:4321`.
 
-3. Instale as dependências:
-npm install
+## Onde editar
 
-4. Inicie o servidor de desenvolvimento:
-npm run dev
+- `src/data/portfolio.js` — projetos e informações pessoais.
+- `src/components/` — componentes visuais.
+- `src/styles/global.css` — estilos globais.
 
-5. Acesse o projeto no seu navegador:
-http://localhost:5132
-
-## Estrutura do projeto
-- src/: Contém os arquivos principais do projeto.
-   - components/: Componentes reutilizáveis da interface.
-   - assets/: Arquivos estáticos como imagens, fontes, etc.
-- public/: Arquivos públicos como o index.html.
-
-## Licença
-Este projeto está licenciado sob a MIT License.
-
-## Contato
-Se você tiver dúvidas ou quiser discutir mais sobre este projeto, entre em contato comigo:
-
-- Email: yuriasantos@hotmail.com.br
-- LinkedIn: (https://www.linkedin.com/in/yuri-amaral-santos-17264a25b/)
-
-
+Para adicionar um projeto, basta adicionar outro objeto ao array `projects` em `src/data/portfolio.js`.

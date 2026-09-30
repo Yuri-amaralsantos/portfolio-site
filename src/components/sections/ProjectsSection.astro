@@ -1,0 +1,35 @@
+---
+import ProjectCard from "../ProjectCard.astro";
+
+const { projects } = Astro.props;
+---
+
+<section
+  id="projects"
+  class="section container"
+>
+  <div class="section-heading">
+    <span class="eyebrow">
+      Projetos
+    </span>
+
+    <h2>
+      Projetos selecionados
+    </h2>
+
+    <p class="muted">
+      Projetos que demonstram experiência em
+      desenvolvimento frontend, backend,
+      APIs, autenticação e integração com
+      diferentes tecnologias.
+    </p>
+  </div>
+
+  <div class="grid">
+    {
+      projects.map((project: any) => (
+        <ProjectCard project={project} />
+      ))
+    }
+  </div>
+</section>

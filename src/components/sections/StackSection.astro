@@ -1,0 +1,183 @@
+---
+const { stack } = Astro.props;
+
+const categories = [
+  {
+    key: "frontend",
+    title: "Frontend",
+    description: "Interfaces e aplicações web",
+  },
+  {
+    key: "backend",
+    title: "Backend",
+    description: "APIs e serviços",
+  },
+  {
+    key: "mobile",
+    title: "Mobile",
+    description: "Aplicações mobile",
+  },
+  {
+    key: "database",
+    title: "Banco de dados",
+    description: "Persistência e dados",
+  },
+  {
+    key: "devops",
+    title: "DevOps",
+    description: "Infraestrutura e entrega",
+  },
+  {
+    key: "architecture",
+    title: "Arquitetura",
+    description: "Práticas e padrões",
+  },
+];
+---
+
+<section id="stack" class="section container">
+  <div class="section-heading">
+    <span class="eyebrow">
+      Tecnologias
+    </span>
+
+    <h2>
+      Stack e ferramentas
+    </h2>
+
+    <p class="muted">
+      Tecnologias utilizadas no desenvolvimento
+      de aplicações web, mobile e APIs.
+    </p>
+  </div>
+
+  <div class="stack-grid">
+    {
+      categories.map((category) => (
+        <article class="stack-card">
+          <div class="stack-card-header">
+            <div class="icon">
+              {category.title.charAt(0)}
+            </div>
+
+            <div>
+              <h3>{category.title}</h3>
+
+              <p>
+                {category.description}
+              </p>
+            </div>
+          </div>
+
+          <div class="technology-list">
+            {
+              stack[category.key].map((technology: any) => (
+                <span class="technology">
+                  {technology}
+                </span>
+              ))
+            }
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .stack-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .stack-card {
+    padding: 22px;
+
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+
+    background: var(--color-white);
+
+    transition:
+      transform 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
+  }
+
+  .stack-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--color-border-hover);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  }
+
+  .stack-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 11px;
+
+    background: var(--color-tag-background);
+    color: var(--color-blue);
+
+    font-size: 0.9rem;
+    font-weight: 800;
+  }
+
+  h3 {
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .stack-card-header p {
+    margin: 3px 0 0;
+
+    color: var(--color-text-muted);
+
+    font-size: 0.8rem;
+  }
+
+  .technology-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .technology {
+    padding: 7px 11px;
+
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+
+    background: var(--color-background-secondary);
+
+    color: var(--color-text);
+
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  @media (max-width: 700px) {
+    .stack-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

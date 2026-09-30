@@ -1,0 +1,57 @@
+---
+import { colors } from "../config/colors.js";
+
+const { title = "Meu Portfólio" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>{title}</title>
+  </head>
+
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style define:vars={{
+  white: colors.white,
+  black: colors.black,
+  blue: colors.blue,
+
+  text: colors.text,
+  textMuted: colors.textMuted,
+  textLight: colors.textLight,
+
+  background: colors.background,
+  backgroundSecondary: colors.backgroundSecondary,
+
+  border: colors.border,
+  borderHover: colors.borderHover,
+
+  tagBackground: colors.tagBackground,
+  tagText: colors.tagText,
+}}>
+  :global(:root) {
+    --color-white: var(--white);
+    --color-black: var(--black);
+    --color-blue: var(--blue);
+
+    --color-text: var(--text);
+    --color-text-muted: var(--textMuted);
+    --color-text-light: var(--textLight);
+
+    --color-background: var(--background);
+    --color-background-secondary: var(--backgroundSecondary);
+
+    --color-border: var(--border);
+    --color-border-hover: var(--borderHover);
+
+    --color-tag-background: var(--tagBackground);
+    --color-tag-text: var(--tagText);
+  }
+</style>

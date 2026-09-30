@@ -1,0 +1,53 @@
+---
+const { profile, technologies } = Astro.props;
+---
+
+<section id="home" class="hero container">
+  <span class="eyebrow">
+    {profile.role}
+  </span>
+
+  <h1>
+    {profile.name}
+  </h1>
+
+  <h3>
+    {profile.headline}
+  </h3>
+
+  <div class="hero-actions">
+    <a
+      class="button"
+      href={profile.resume}
+      download
+    >
+      Baixar currículo
+    </a>
+
+    <a
+      class="secondary-button"
+      href={profile.social.linkedin}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      LinkedIn ↗
+    </a>
+
+    <a
+      class="secondary-button"
+      href={profile.social.github}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      GitHub ↗
+    </a>
+  </div>
+
+  <div class="technologies">
+    {
+      technologies.map((technology: any) => (
+        <span>{technology}</span>
+      ))
+    }
+  </div>
+</section>
